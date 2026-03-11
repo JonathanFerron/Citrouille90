@@ -6,14 +6,104 @@
    font-family="Arial, Helvetica, sans-serif"
    version="1.1"
    id="svg148"
-   sodipodi:docname="Pin Assignment.svg.2025_12_22_08_23_38.0.svg"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="Pin Assignment.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs152" />
+     id="defs152">
+    <marker
+       style="overflow:visible"
+       id="marker41"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path41" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker39"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path39" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ArrowWide"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Wide arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc"
+         id="path1" />
+    </marker>
+    <rect
+       x="550.12806"
+       y="226.81257"
+       width="52.246799"
+       height="28.274738"
+       id="rect21" />
+    <rect
+       x="550.12806"
+       y="232.95925"
+       width="43.641444"
+       height="19.669383"
+       id="rect19" />
+    <symbol
+       id="symbol6">
+      <text
+         x="408.03546"
+         y="238.64302"
+         fill="#00a000"
+         id="text5"
+         style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+           sodipodi:role="line"
+           id="tspan5"
+           x="394.79398"
+           y="238.64302">enc</tspan><tspan
+           sodipodi:role="line"
+           id="tspan6"
+           x="394.79398"
+           y="260.09076" /></text>
+    </symbol>
+  </defs>
   <sodipodi:namedview
      id="namedview150"
      pagecolor="#ffffff"
@@ -23,47 +113,53 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="0.81344697"
-     inkscape:cx="407.52503"
+     inkscape:zoom="0.78314394"
+     inkscape:cx="408.60943"
      inkscape:cy="528"
      inkscape:window-width="1920"
-     inkscape:window-height="1051"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:window-height="1029"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg148"
      units="in"
-     inkscape:document-units="in" />
+     inkscape:document-units="in"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true" />
   <!-- Background -->
   <!-- Chip body -->
   <rect
-     x="146.23474"
-     y="291.4444"
+     x="334.62781"
+     y="-663.91156"
      width="536.19421"
      height="536.19421"
      fill="none"
      stroke="#000000"
      stroke-width="3"
-     id="rect4" />
+     id="rect4"
+     transform="rotate(90)" />
   <!-- Pin 1 marker -->
   <circle
-     cx="178.40639"
-     cy="323.61603"
+     cx="364.34079"
+     cy="-632.96924"
      r="10.723885"
      fill="#000000"
      id="circle6"
-     style="stroke-width:1" />
+     style="stroke-width:1"
+     transform="rotate(90)" />
   <!-- Inner core -->
   <rect
-     x="264.19745"
-     y="409.4071"
+     x="450.13184"
+     y="-547.17816"
      width="300.26877"
      height="300.26877"
      fill="none"
      stroke="#000000"
      stroke-width="2"
      stroke-dasharray="10, 8"
-     id="rect8" />
+     id="rect8"
+     transform="rotate(90)" />
   <!-- Title -->
   <text
      x="412.72708"
@@ -76,372 +172,939 @@
      style="stroke-width:1">AVR64DU32 — 32-Pin Package</text>
   <!-- TOP pins -->
   <text
-     x="206.28848"
-     y="273.21381"
+     x="693.01624"
+     y="398.59854"
      fill="#00a000"
      id="text12"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">PA2</text>
   <text
-     x="275.99374"
-     y="273.21381"
+     x="690.45087"
+     y="467.18115"
      fill="#00a000"
      id="text14"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">PA1</text>
   <text
-     x="349.98856"
-     y="264.63467"
+     x="700.31464"
+     y="530.74365"
      fill="#00a000"
      id="text16"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">PA0</text>
   <text
-     x="419.69379"
-     y="264.63467"
+     x="698.09174"
+     y="611.76929"
      fill="#000000"
      id="text18"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">GND</text>
   <text
-     x="489.39905"
-     y="264.63467"
+     x="698.51062"
+     y="681.0556"
      fill="#000000"
      id="text20"
-     style="font-size:17.1582px;text-anchor:middle;stroke-width:1">VDD</text>
+     style="font-size:17.1582px;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke-width:1">VDD</text>
   <text
-     x="559.10431"
-     y="264.63467"
+     x="698.08331"
+     y="750.9787"
      fill="#800080"
      id="text22"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">UPDI</text>
   <text
-     x="628.80951"
-     y="264.63467"
+     x="707.42377"
+     y="821.3877"
      fill="#800080"
      id="text24"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">RESET</text>
   <text
-     x="668.48792"
-     y="283.93768"
+     x="693.11761"
+     y="859.54773"
      fill="#00a000"
      id="text26"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">PF5</text>
   <text
-     x="210.57803"
-     y="313.96454"
+     x="648.7702"
+     y="402.47757"
      id="text28"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">32</text>
   <text
-     x="280.28329"
-     y="313.96454"
+     x="649.89288"
+     y="471.06018"
      id="text30"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">31</text>
   <text
-     x="349.98856"
-     y="313.96454"
+     x="648.72833"
+     y="541.92999"
      id="text32"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">30</text>
   <text
-     x="419.69379"
-     y="313.96454"
+     x="648.80017"
+     y="611.57172"
      id="text34"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">29</text>
   <text
-     x="489.39905"
-     y="313.96454"
+     x="648.80017"
+     y="681.27698"
      id="text36"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">28</text>
   <text
-     x="559.10431"
-     y="313.96454"
+     x="648.91748"
+     y="751.0744"
      id="text38"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">27</text>
   <text
-     x="628.80951"
-     y="313.96454"
+     x="648.81696"
+     y="820.67065"
      id="text40"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">26</text>
   <text
-     x="666.34314"
-     y="313.96454"
+     x="648.76666"
+     y="858.25458"
      id="text42"
      style="font-size:17.1582px;text-anchor:middle;stroke-width:1">25</text>
   <!-- LEFT pins -->
-  <g
-     font-size="16px"
-     text-anchor="end"
-     id="g78"
-     transform="matrix(1.0723885,0,0,1.0723885,-68.242962,76.966701)"
-     style="stroke-width:0.932498">
-    <text
-       x="185"
-       y="260"
-       fill="#00a000"
-       id="text46"
-       style="stroke-width:0.819058">PA3</text>
-    <text
-       x="185"
-       y="305"
-       fill="#00a000"
-       id="text48"
-       style="stroke-width:0.819058">PA4</text>
-    <text
-       x="185"
-       y="350"
-       fill="#00a000"
-       id="text50"
-       style="stroke-width:0.819058">PA5</text>
-    <text
-       x="185"
-       y="395"
-       fill="#00a000"
-       id="text52"
-       style="stroke-width:0.819058">PA6</text>
-    <text
-       x="185"
-       y="440"
-       fill="#00a000"
-       id="text54"
-       style="stroke-width:0.819058">PA7</text>
-    <text
-       x="185"
-       y="485"
-       fill="#000000"
-       id="text56"
-       style="stroke-width:0.819058">VUSB</text>
-    <text
-       x="185"
-       y="530"
-       fill="#d00000"
-       id="text58"
-       style="stroke-width:0.819058">DM</text>
-    <text
-       x="185"
-       y="575"
-       fill="#d00000"
-       id="text60"
-       style="stroke-width:0.819058">DP</text>
-    <text
-       x="215"
-       y="260"
-       id="text62"
-       style="stroke-width:0.932498">1</text>
-    <text
-       x="215"
-       y="305"
-       id="text64"
-       style="stroke-width:0.932498">2</text>
-    <text
-       x="215"
-       y="350"
-       id="text66"
-       style="stroke-width:0.932498">3</text>
-    <text
-       x="215"
-       y="395"
-       id="text68"
-       style="stroke-width:0.932498">4</text>
-    <text
-       x="215"
-       y="440"
-       id="text70"
-       style="stroke-width:0.932498">5</text>
-    <text
-       x="215"
-       y="485"
-       id="text72"
-       style="stroke-width:0.932498">6</text>
-    <text
-       x="215"
-       y="530"
-       id="text74"
-       style="stroke-width:0.932498">7</text>
-    <text
-       x="215"
-       y="575"
-       id="text76"
-       style="stroke-width:0.932498">8</text>
-  </g>
+  <text
+     x="588.96942"
+     y="317.89801"
+     fill="#00a000"
+     id="text46"
+     style="font-size:17.1582px;text-anchor:end;stroke-width:0.878348">PA3</text>
+  <text
+     x="540.82092"
+     y="317.95663"
+     fill="#00a000"
+     id="text48"
+     style="font-size:17.1582px;text-anchor:end;stroke-width:0.878348">PA4</text>
+  <text
+     x="492.38745"
+     y="317.92313"
+     fill="#00a000"
+     id="text50"
+     style="font-size:17.1582px;text-anchor:end;stroke-width:0.878348">PA5</text>
+  <text
+     x="444.20538"
+     y="317.89801"
+     fill="#00a000"
+     id="text52"
+     style="font-size:17.1582px;text-anchor:end;stroke-width:0.878348">PA6</text>
+  <text
+     x="396.02332"
+     y="317.98178"
+     fill="#00a000"
+     id="text54"
+     style="font-size:17.1582px;text-anchor:end;stroke-width:0.878348">PA7</text>
+  <text
+     x="355.01086"
+     y="319.3421"
+     fill="#000000"
+     id="text56"
+     style="font-size:17.1582px;text-anchor:end;fill:#ff0000;fill-opacity:1;stroke-width:0.878348">VUSB</text>
+  <text
+     x="297.5311"
+     y="319.95898"
+     fill="#d00000"
+     id="text58"
+     style="font-size:17.1582px;text-anchor:end;fill:#0a11ff;fill-opacity:1;stroke-width:0.878348">DM</text>
+  <text
+     x="247.57291"
+     y="321.65973"
+     fill="#d00000"
+     id="text60"
+     style="font-size:17.1582px;text-anchor:end;fill:#0a11ff;fill-opacity:1;stroke-width:0.878348">DP</text>
+  <text
+     x="579.1839"
+     y="360.07303"
+     id="text62"
+     style="font-size:17.1582px;text-anchor:end;stroke-width:1">1</text>
+  <text
+     x="530.47888"
+     y="360.52057"
+     id="text64"
+     style="font-size:17.1582px;text-anchor:end;stroke-width:1">2</text>
+  <text
+     x="481.94843"
+     y="360.57571"
+     id="text66"
+     style="font-size:17.1582px;text-anchor:end;stroke-width:1">3</text>
+  <text
+     x="434.05121"
+     y="360.383"
+     id="text68"
+     style="font-size:17.1582px;text-anchor:end;stroke-width:1">4</text>
+  <text
+     x="385.28687"
+     y="360.51288"
+     id="text70"
+     style="font-size:17.1582px;text-anchor:end;stroke-width:1">5</text>
+  <text
+     x="337.22208"
+     y="360.53799"
+     id="text72"
+     style="font-size:17.1582px;text-anchor:end;stroke-width:1">6</text>
+  <text
+     x="288.87662"
+     y="360.62598"
+     id="text74"
+     style="font-size:17.1582px;text-anchor:end;stroke-width:1">7</text>
+  <text
+     x="240.66522"
+     y="360.5799"
+     id="text76"
+     style="font-size:17.1582px;text-anchor:end;stroke-width:1">8</text>
   <!-- BOTTOM pins -->
-  <g
-     font-size="16px"
-     text-anchor="middle"
-     id="g112"
-     transform="matrix(1.0723885,0,0,1.0723885,-106.84895,51.229378)"
-     style="stroke-width:0.932498">
-    <text
-       x="260"
-       y="745"
-       fill="#00a000"
-       id="text80"
-       style="stroke-width:0.819058">PC3</text>
-    <text
-       x="325"
-       y="745"
-       fill="#00a000"
-       id="text82"
-       style="stroke-width:0.819058">PD0</text>
-    <text
-       x="390"
-       y="745"
-       fill="#00a000"
-       id="text84"
-       style="stroke-width:0.819058">PD1</text>
-    <text
-       x="455"
-       y="745"
-       fill="#00a000"
-       id="text86"
-       style="stroke-width:0.819058">PD2</text>
-    <text
-       x="520"
-       y="745"
-       fill="#00a000"
-       id="text88"
-       style="stroke-width:0.819058">PD3</text>
-    <text
-       x="585"
-       y="745"
-       fill="#00a000"
-       id="text90"
-       style="stroke-width:0.819058">PD4</text>
-    <text
-       x="650"
-       y="745"
-       fill="#00a000"
-       id="text92"
-       style="stroke-width:0.819058">PD5</text>
-    <text
-       x="715"
-       y="745"
-       fill="#00a000"
-       id="text94"
-       style="stroke-width:0.819058">PD6</text>
-    <text
-       x="260"
-       y="715"
-       id="text96"
-       style="stroke-width:0.932498">9</text>
-    <text
-       x="325"
-       y="715"
-       id="text98"
-       style="stroke-width:0.932498">10</text>
-    <text
-       x="390"
-       y="715"
-       id="text100"
-       style="stroke-width:0.932498">11</text>
-    <text
-       x="455"
-       y="715"
-       id="text102"
-       style="stroke-width:0.932498">12</text>
-    <text
-       x="520"
-       y="715"
-       id="text104"
-       style="stroke-width:0.932498">13</text>
-    <text
-       x="585"
-       y="715"
-       id="text106"
-       style="stroke-width:0.932498">14</text>
-    <text
-       x="650"
-       y="715"
-       id="text108"
-       style="stroke-width:0.932498">15</text>
-    <text
-       x="715"
-       y="715"
-       id="text110"
-       style="stroke-width:0.932498">16</text>
-  </g>
+  <text
+     x="102.45638"
+     y="364.31564"
+     fill="#00a000"
+     id="text80"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:0.878348">PC3</text>
+  <text
+     x="102.40194"
+     y="433.92456"
+     fill="#00a000"
+     id="text82"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:0.878348">PD0</text>
+  <text
+     x="103.6712"
+     y="502.56998"
+     fill="#00a000"
+     id="text84"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:0.878348">PD1</text>
+  <text
+     x="102.54855"
+     y="573.39789"
+     fill="#00a000"
+     id="text86"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:0.878348">PD2</text>
+  <text
+     x="102.37679"
+     y="643.05707"
+     fill="#00a000"
+     id="text88"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:0.878348">PD3</text>
+  <text
+     x="102.48572"
+     y="712.82098"
+     fill="#00a000"
+     id="text90"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:0.878348">PD4</text>
+  <text
+     x="102.30978"
+     y="782.49274"
+     fill="#00a000"
+     id="text92"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:0.878348">PD5</text>
+  <text
+     x="102.38518"
+     y="852.17279"
+     fill="#00a000"
+     id="text94"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:0.878348">PD6</text>
+  <text
+     x="144.68057"
+     y="363.94702"
+     id="text96"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:1">9</text>
+  <text
+     x="144.136"
+     y="434.19687"
+     id="text98"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:1">10</text>
+  <text
+     x="145.40527"
+     y="502.84225"
+     id="text100"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:1">11</text>
+  <text
+     x="144.28262"
+     y="573.67017"
+     id="text102"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:1">12</text>
+  <text
+     x="144.11087"
+     y="643.32935"
+     id="text104"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:1">13</text>
+  <text
+     x="144.24492"
+     y="713.11841"
+     id="text106"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:1">14</text>
+  <text
+     x="144.06898"
+     y="782.79016"
+     id="text108"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:1">15</text>
+  <text
+     x="144.11925"
+     y="852.44507"
+     id="text110"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:1">16</text>
   <!-- RIGHT pins -->
   <text
-     x="689.93567"
-     y="355.78769"
+     x="557.76556"
+     y="893.07489"
      fill="#00a000"
      id="text114"
      style="font-size:17.1582px;text-anchor:start;stroke-width:1">PF4</text>
   <text
-     x="689.93567"
-     y="404.0452"
+     x="509.39911"
+     y="893.01624"
      fill="#00a000"
      id="text116"
      style="font-size:17.1582px;text-anchor:start;stroke-width:1">PF3</text>
   <text
-     x="689.93567"
-     y="452.30264"
+     x="461.31339"
+     y="893.06232"
      fill="#00a000"
      id="text118"
      style="font-size:17.1582px;text-anchor:start;stroke-width:1">PF2</text>
   <text
-     x="689.93567"
-     y="500.56015"
+     x="414.17853"
+     y="891.93964"
      fill="#800080"
      id="text120"
-     style="font-size:17.1582px;text-anchor:start;stroke-width:1">PF1</text>
+     style="font-size:17.1582px;text-anchor:start;fill:#00a000;fill-opacity:0.952941;stroke-width:1">PF1</text>
   <text
-     x="689.93567"
-     y="548.81763"
+     x="364.65179"
+     y="892.99945"
      fill="#800080"
      id="text122"
-     style="font-size:17.1582px;text-anchor:start;stroke-width:1">PF0</text>
+     style="font-size:17.1582px;text-anchor:start;fill:#00a000;fill-opacity:0.866667;stroke-width:1">PF0</text>
   <text
-     x="689.93567"
-     y="597.07513"
+     x="313.39496"
+     y="896.15802"
      fill="#000000"
      id="text124"
      style="font-size:17.1582px;text-anchor:start;stroke-width:1">GND</text>
   <text
-     x="689.93567"
-     y="645.33258"
+     x="266.50729"
+     y="894.78821"
      fill="#000000"
      id="text126"
-     style="font-size:17.1582px;text-anchor:start;stroke-width:1">VDD</text>
+     style="font-size:17.1582px;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke-width:1">VDD</text>
   <text
-     x="689.93567"
-     y="693.59003"
+     x="218.98294"
+     y="894.05511"
      fill="#00a000"
      id="text128"
      style="font-size:17.1582px;text-anchor:start;stroke-width:1">PD7</text>
   <text
-     x="657.76404"
-     y="355.78769"
+     x="564.38483"
+     y="854.33423"
      id="text130"
      style="font-size:17.1582px;text-anchor:start;stroke-width:1">24</text>
   <text
-     x="657.76404"
-     y="404.0452"
+     x="515.99329"
+     y="854.25043"
      id="text132"
      style="font-size:17.1582px;text-anchor:start;stroke-width:1">23</text>
   <text
-     x="657.76404"
-     y="452.30264"
+     x="467.90756"
+     y="854.29651"
      id="text134"
      style="font-size:17.1582px;text-anchor:start;stroke-width:1">22</text>
   <text
-     x="657.76404"
-     y="500.56015"
+     x="420.77271"
+     y="853.17383"
      id="text136"
      style="font-size:17.1582px;text-anchor:start;stroke-width:1">21</text>
   <text
-     x="657.76404"
-     y="548.81763"
+     x="371.24597"
+     y="854.23364"
      id="text138"
      style="font-size:17.1582px;text-anchor:start;stroke-width:1">20</text>
   <text
-     x="657.76404"
-     y="597.07513"
+     x="322.27985"
+     y="854.94226"
      id="text140"
      style="font-size:17.1582px;text-anchor:start;stroke-width:1">19</text>
   <text
-     x="657.76404"
-     y="645.33258"
+     x="274.0224"
+     y="854.94226"
      id="text142"
      style="font-size:17.1582px;text-anchor:start;stroke-width:1">18</text>
   <text
-     x="657.76404"
-     y="693.59003"
+     x="225.88223"
+     y="855.03442"
      id="text144"
      style="font-size:17.1582px;text-anchor:start;stroke-width:1">17</text>
+  <text
+     x="431.02719"
+     y="279.42853"
+     fill="#00a000"
+     id="text4"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       id="tspan12"
+       x="431.02719"
+       y="279.42853">row 7</tspan><tspan
+       sodipodi:role="line"
+       id="tspan13"
+       x="431.02719"
+       y="300.87628">-&gt;</tspan></text>
+  <text
+     x="380.25229"
+     y="277.26453"
+     fill="#00a000"
+     id="text6"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;fill:#00a000;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       id="tspan10"
+       x="380.25229"
+       y="277.26453">enc</tspan><tspan
+       sodipodi:role="line"
+       x="380.25229"
+       y="298.71228"
+       id="tspan11">&lt;-</tspan></text>
+  <text
+     x="478.48032"
+     y="278.29724"
+     fill="#00a000"
+     id="text4-9"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       id="tspan12-2"
+       x="478.48032"
+       y="278.29724">led 1</tspan><tspan
+       sodipodi:role="line"
+       id="tspan13-2"
+       x="478.48032"
+       y="299.745">-&gt;</tspan></text>
+  <text
+     x="525.77783"
+     y="276.82071"
+     fill="#00a000"
+     id="text15"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="525.77783"
+       y="276.82071"
+       id="tspan18">led 2</tspan><tspan
+       sodipodi:role="line"
+       id="tspan15"
+       x="525.77783"
+       y="298.26846">-&gt;</tspan></text>
+  <text
+     x="573.23096"
+     y="274.82016"
+     fill="#00a000"
+     id="text17"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       id="tspan16"
+       x="573.23096"
+       y="274.82016">row 6</tspan><tspan
+       sodipodi:role="line"
+       id="tspan17"
+       x="573.23096"
+       y="296.26791">-&gt;</tspan></text>
+  <text
+     xml:space="preserve"
+     id="text19"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;font-family:'Anonymous Pro';-inkscape-font-specification:'Anonymous Pro, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect19);display:inline;fill:#000000" />
+  <text
+     xml:space="preserve"
+     id="text21"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;font-family:'Anonymous Pro';-inkscape-font-specification:'Anonymous Pro, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect21);display:inline;fill:#000000" />
+  <text
+     x="736.67865"
+     y="392.15817"
+     fill="#00a000"
+     id="text4-7"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       id="tspan12-3"
+       x="736.67865"
+       y="392.15817">row 8</tspan><tspan
+       sodipodi:role="line"
+       id="tspan13-6"
+       x="736.67865"
+       y="413.60593">-&gt;</tspan></text>
+  <text
+     x="736.06396"
+     y="459.15701"
+     fill="#00a000"
+     id="text4-2"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       id="tspan13-3"
+       x="736.06396"
+       y="459.15701">row 9</tspan><tspan
+       sodipodi:role="line"
+       x="736.06396"
+       y="480.60477"
+       id="tspan24">-&gt;</tspan></text>
+  <text
+     x="702.12378"
+     y="546.80634"
+     fill="#00a000"
+     id="text4-7-9"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       id="tspan13-6-7"
+       x="702.12378"
+       y="546.80634">row 10</tspan><tspan
+       sodipodi:role="line"
+       x="702.12378"
+       y="568.25409"
+       id="tspan27">-&gt;</tspan></text>
+  <text
+     x="63.569965"
+     y="347.7287"
+     fill="#00a000"
+     id="text4-2-8"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       id="tspan13-3-5"
+       x="63.569965"
+       y="347.7287">enc</tspan><tspan
+       sodipodi:role="line"
+       x="63.569965"
+       y="369.17645"
+       id="tspan44">&lt;-</tspan></text>
+  <path
+     style="fill:none;fill-opacity:0.564706;stroke:#0b11ff;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
+     d="M 235.32578,294.2715 V 144.70003"
+     id="path36" />
+  <path
+     style="fill:none;fill-opacity:0.564706;stroke:#0b11ff;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
+     d="M 282.19151,294.2715 V 144.70003"
+     id="path37" />
+  <path
+     style="fill:none;fill-opacity:0.564706;stroke:#ff0000;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker39);marker-end:url(#ArrowWide)"
+     d="M 402.84583,111.79431 V 428.88583 H 575.3516 v 248.28864 h 47.86287"
+     id="path38"
+     sodipodi:nodetypes="cc" />
+  <path
+     style="fill:none;fill-opacity:0.564706;stroke:#ff0000;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker41)"
+     d="m 575.3516,675.92804 v 95.72574 H 285.18294 v 57.83431"
+     id="path40" />
+  <text
+     x="787.84265"
+     y="-45.231121"
+     fill="#00a000"
+     id="text44"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"
+     transform="rotate(90)"><tspan
+       sodipodi:role="line"
+       id="tspan43"
+       x="787.84265"
+       y="-45.231121">-&gt;</tspan></text>
+  <text
+     x="58.584251"
+     y="418.52585"
+     fill="#00a000"
+     id="text47"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="58.584251"
+       y="418.52585"
+       id="tspan46">row 1</tspan><tspan
+       sodipodi:role="line"
+       x="58.584251"
+       y="439.9736"
+       id="tspan63">&lt;-</tspan></text>
+  <text
+     x="55.592819"
+     y="493.31158"
+     fill="#00a000"
+     id="text53"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="55.592819"
+       y="493.31158"
+       id="tspan52">row 2</tspan><tspan
+       sodipodi:role="line"
+       x="55.592819"
+       y="514.75934"
+       id="tspan64">&lt;-</tspan></text>
+  <text
+     x="50.607105"
+     y="564.10876"
+     fill="#00a000"
+     id="text55"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="50.607105"
+       y="564.10876"
+       id="tspan54">row 3</tspan><tspan
+       sodipodi:role="line"
+       x="50.607105"
+       y="585.55652"
+       id="tspan65">&lt;-</tspan></text>
+  <text
+     x="51.604248"
+     y="626.92877"
+     fill="#00a000"
+     id="text57"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="51.604248"
+       y="626.92877"
+       id="tspan56">row 4</tspan><tspan
+       sodipodi:role="line"
+       x="51.604248"
+       y="648.37653"
+       id="tspan66">&lt;-</tspan></text>
+  <text
+     x="46.618534"
+     y="697.72595"
+     fill="#00a000"
+     id="text59"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="46.618534"
+       y="697.72595"
+       id="tspan58">row 5</tspan><tspan
+       sodipodi:role="line"
+       x="46.618534"
+       y="719.17371"
+       id="tspan67">&lt;-</tspan></text>
+  <text
+     x="49.918457"
+     y="772.51166"
+     fill="#00a000"
+     id="text61"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="49.918457"
+       y="772.51166"
+       id="tspan68">col 9</tspan></text>
+  <text
+     x="53.321217"
+     y="842.26025"
+     fill="#00a000"
+     id="text63"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="53.321217"
+       y="842.26025"
+       id="tspan62">col 8</tspan></text>
+  <text
+     x="837.58551"
+     y="-33.954052"
+     fill="#00a000"
+     id="text69"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;white-space:pre;inline-size:39.712;display:inline;stroke-width:0.878348"
+     transform="rotate(90,-4.158661,14.849917)"
+     xml:space="preserve"><tspan
+       x="837.58551"
+       y="-33.954052"
+       id="tspan20">-&gt;</tspan></text>
+  <text
+     x="235.82159"
+     y="912.53827"
+     fill="#00a000"
+     id="text71"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="235.82159"
+       y="912.53827"
+       id="tspan70">col 7</tspan></text>
+  <text
+     x="837.58551"
+     y="-33.954052"
+     fill="#00a000"
+     id="text73"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;white-space:pre;inline-size:39.712;display:inline;stroke-width:0.878348"
+     transform="rotate(90,51.952539,141.23909)"
+     xml:space="preserve"><tspan
+       x="837.58551"
+       y="-33.954052"
+       id="tspan21">-&gt;</tspan></text>
+  <text
+     x="381.07974"
+     y="916.24701"
+     fill="#00a000"
+     id="text75"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="381.07974"
+       y="916.24701"
+       id="tspan73">col 6</tspan></text>
+  <text
+     x="837.58551"
+     y="-33.954052"
+     fill="#00a000"
+     id="text77"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;white-space:pre;inline-size:39.712;display:inline;stroke-width:0.878348"
+     transform="rotate(90,124.40057,218.63208)"
+     xml:space="preserve"><tspan
+       x="837.58551"
+       y="-33.954052"
+       id="tspan22">-&gt;</tspan></text>
+  <text
+     x="477.17538"
+     y="917.37714"
+     fill="#00a000"
+     id="text78"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="477.17538"
+       y="917.37714"
+       id="tspan77">col 4</tspan></text>
+  <text
+     x="837.58551"
+     y="-33.954052"
+     fill="#00a000"
+     id="text79"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;white-space:pre;inline-size:39.712;display:inline;stroke-width:0.878348"
+     transform="rotate(90,173.10401,264.24492)"
+     xml:space="preserve"><tspan
+       x="837.58551"
+       y="-33.954052"
+       id="tspan23">-&gt;</tspan></text>
+  <text
+     x="431.76556"
+     y="916.86511"
+     fill="#00a000"
+     id="text81"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="431.76556"
+       y="916.86511"
+       id="tspan79">col 5</tspan></text>
+  <text
+     x="837.58551"
+     y="-33.954052"
+     fill="#00a000"
+     id="text83"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;white-space:pre;inline-size:39.712;display:inline;stroke-width:0.878348"
+     transform="rotate(90,147.7611,241.37449)"
+     xml:space="preserve"><tspan
+       x="837.58551"
+       y="-33.954052"
+       id="tspan26">-&gt;</tspan></text>
+  <text
+     x="528.19226"
+     y="915.62885"
+     fill="#00a000"
+     id="text85"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="528.19226"
+       y="915.62885"
+       id="tspan83">col 3</tspan></text>
+  <text
+     x="837.58551"
+     y="-33.954052"
+     fill="#00a000"
+     id="text87"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;white-space:pre;inline-size:39.712;display:inline;stroke-width:0.878348"
+     transform="rotate(90,197.51974,288.66065)"
+     xml:space="preserve"><tspan
+       x="837.58551"
+       y="-33.954052"
+       id="tspan30">-&gt;</tspan></text>
+  <text
+     x="577.02374"
+     y="913.77448"
+     fill="#00a000"
+     id="text89"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="577.02374"
+       y="913.77448"
+       id="tspan87">col 2</tspan></text>
+  <text
+     x="837.58551"
+     y="-33.954052"
+     fill="#00a000"
+     id="text91"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;white-space:pre;inline-size:39.712;display:inline;stroke-width:0.878348"
+     transform="rotate(90,222.86265,312.1492)"
+     xml:space="preserve"><tspan
+       x="837.58551"
+       y="-33.954052"
+       id="tspan32">-&gt;</tspan></text>
+  <text
+     x="732.42816"
+     y="861.43134"
+     fill="#00a000"
+     id="text93"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="732.42816"
+       y="861.43134"
+       id="tspan91">col 1</tspan></text>
+  <text
+     x="837.58551"
+     y="-33.954052"
+     fill="#00a000"
+     id="text95"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;white-space:pre;inline-size:39.712;display:inline;stroke-width:0.878348"
+     transform="rotate(90,328.0783,364.17861)"
+     xml:space="preserve"><tspan
+       x="837.58551"
+       y="-33.954052"
+       id="tspan39">-&gt;</tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;font-family:'Anonymous Pro';-inkscape-font-specification:'Anonymous Pro, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#431400;fill-opacity:0.0313725;stroke:#ff0000;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1"
+     x="431.83176"
+     y="878.52411"
+     id="text97"><tspan
+       sodipodi:role="line"
+       id="tspan97"
+       x="431.83176"
+       y="878.52411" /></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:17.3333px;font-family:'Anonymous Pro';-inkscape-font-specification:'Anonymous Pro, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;writing-mode:lr-tb;direction:ltr;fill:#00a100;fill-opacity:1;stroke:#00a300;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1"
+     x="636.82068"
+     y="890.76227"
+     id="text99"><tspan
+       sodipodi:role="line"
+       id="tspan98"
+       x="636.82068"
+       y="890.76227" /></text>
+  <path
+     style="fill:none;fill-opacity:0.564706;stroke:#800080;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
+     d="m 726.00184,744.05376 h 26.89005 V 574.76517"
+     id="path2"
+     sodipodi:nodetypes="ccc" />
+  <text
+     x="768.70038"
+     y="562.23804"
+     fill="#800080"
+     id="text2"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:1">via</text>
+  <path
+     style="fill:none;fill-opacity:0.564706;stroke:#800080;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
+     d="m 743.82735,817.4529 h 34.22996 V 582.10508"
+     id="path3"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;fill-opacity:0.564706;stroke:#00a200;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
+     d="m 437.38627,346.92043 v 26.89005 h 169.28858"
+     id="path4"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;fill-opacity:0.564706;stroke:#00a200;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
+     d="m 369.62136,341.81281 v 43.48981 H 200.33278"
+     id="path5"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;fill-opacity:0.564706;stroke:#800080;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
+     d="M 730.71765,258.16874 H 696.48769 V 145.40375"
+     id="path6"
+     sodipodi:nodetypes="ccc" />
+  <text
+     x="677.65283"
+     y="112.52647"
+     fill="#800080"
+     id="text7"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:1"><tspan
+       sodipodi:role="line"
+       id="tspan35"
+       x="677.65283"
+       y="112.52647">UPDI</tspan><tspan
+       sodipodi:role="line"
+       id="tspan36"
+       x="677.65283"
+       y="133.97423">Connector</tspan></text>
+  <path
+     style="fill:none;fill-opacity:0.564706;stroke:#800080;stroke-width:3.77953;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowWide)"
+     d="m 751.48876,258.16874 h 34.22996 V 145.40375"
+     id="path7"
+     sodipodi:nodetypes="ccc" />
+  <text
+     x="763.20544"
+     y="109.97266"
+     fill="#800080"
+     id="text8"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:1"><tspan
+       sodipodi:role="line"
+       id="tspan37"
+       x="763.20544"
+       y="109.97266">RESET</tspan><tspan
+       sodipodi:role="line"
+       id="tspan38"
+       x="763.20544"
+       y="131.42041">Button</tspan></text>
+  <text
+     x="743.16229"
+     y="281.31903"
+     fill="#800080"
+     id="text9"
+     style="font-size:17.1582px;text-anchor:middle;stroke-width:1">via</text>
+  <text
+     x="406.92679"
+     y="978.93732"
+     fill="#00a000"
+     id="text25"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="406.92679"
+       y="978.93732"
+       id="tspan19">via pour chaque colonne</tspan><tspan
+       sodipodi:role="line"
+       x="406.92679"
+       y="1000.3851"
+       id="tspan31">(route colonnes en dessous)</tspan></text>
+  <rect
+     style="fill:none;stroke:#008080;stroke-width:3.77953;stroke-opacity:1"
+     id="rect25"
+     width="47.245464"
+     height="16.599758"
+     x="284.74969"
+     y="905.74121" />
+  <text
+     x="308.29617"
+     y="941.7851"
+     fill="#00a000"
+     id="text27"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;fill:#008080;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="308.29617"
+       y="941.7851"
+       id="tspan25">100nF</tspan></text>
+  <rect
+     style="fill:none;stroke:#008080;stroke-width:3.77953;stroke-opacity:1"
+     id="rect27"
+     width="47.245464"
+     height="16.599758"
+     x="-664.40625"
+     y="681.86707"
+     transform="rotate(-90)" />
+  <text
+     x="725.84393"
+     y="646.82013"
+     fill="#00a000"
+     id="text29"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;fill:#008080;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="725.84393"
+       y="646.82013"
+       id="tspan28">100nF</tspan></text>
+  <rect
+     style="fill:none;stroke:#008080;stroke-width:3.77953;stroke-opacity:1"
+     id="rect29"
+     width="47.245464"
+     height="16.599758"
+     x="-291.55014"
+     y="325.61072"
+     transform="rotate(-90)" />
+  <text
+     x="335.11118"
+     y="233.10307"
+     fill="#00a000"
+     id="text31"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;fill:#008080;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="335.11118"
+       y="233.10307"
+       id="tspan29">100nF</tspan></text>
+  <text
+     x="538.448"
+     y="206.41011"
+     fill="#00a000"
+     id="text33"
+     style="font-size:17.1582px;text-align:center;text-anchor:middle;stroke-width:0.878348"><tspan
+       sodipodi:role="line"
+       x="538.448"
+       y="206.41011"
+       id="tspan33">route rangées et autres</tspan><tspan
+       sodipodi:role="line"
+       x="538.448"
+       y="227.85786"
+       id="tspan34">traces au dessus</tspan></text>
 </svg>

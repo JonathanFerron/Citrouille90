@@ -1,7 +1,7 @@
-# AmberClick90 Git Repository Structure
+# Citrouille90 Git Repository Structure
 
 ```
-AmberClick90/
+git/
 │
 ├── README.md                           # Project overview, quick start
 ├── LICENSE                             # Open source license
@@ -24,26 +24,6 @@ AmberClick90/
 │
 ├── hardware/                           # PCB design files
 │   ├── README.md                       # Hardware documentation
-│   ├── kicad/                          # KiCad project
-│   │   ├── AmberClick90.kicad_pro      # KiCad project file
-│   │   ├── AmberClick90.kicad_sch      # Main schematic
-│   │   ├── AmberClick90.kicad_pcb      # PCB layout
-│   │   ├── AmberClick90-cache.lib      # Component cache
-│   │   ├── sym-lib-table               # Symbol library table
-│   │   ├── fp-lib-table                # Footprint library table
-│   │   ├── gerbers/                    # Gerber files for fabrication
-│   │   │   ├── AmberClick90-F_Cu.gbr
-│   │   │   ├── AmberClick90-B_Cu.gbr
-│   │   │   └── ...
-│   │   └── 3d_models/                  # 3D models for PCB
-│   │       └── AVR64DU32.step
-│   ├── schematic.pdf                   # PDF export of schematic
-│   ├── bom.csv                         # Bill of materials export
-│   └── datasheets/                     # Component datasheets
-│       ├── AVR64DU32.pdf
-│       ├── ALPS_EC11.pdf
-│       ├── Matias_switches.pdf
-│       └── 1N4148W.pdf
 │
 ├── case/                               # 3D printed case
 │   ├── README.md                       # Case assembly instructions
@@ -248,4 +228,47 @@ This structure provides clear separation between:
 - **Hardware** (PCB, case, datasheets)
 - **Firmware** (source, bootloader, library, tools)
 - **Documentation** (guides, specs, assembly)
-- **Examples** (reference configurations)
+- **Examples** (reference configurations)rmware/build/` (gitignored)
+
+### User-Modifiable Files
+- `firmware/src/user_keymap.c` - User's active keymap
+- `firmware/src/user_macros.c` - User's active macros (copied from lib or custom)
+- `firmware/src/user_encoder.c` - User's encoder behavior (copied from lib or custom)
+- `firmware/src/user_config.h` - Firmware configuration (led default brightness, debounce method and time, etc.)
+
+### Reference Files (Copy From Here)
+- `firmware/lib/macros/*` - Copy functions to `src/macros.c`
+- `firmware/lib/encoders/*` - Copy code to `src/encoder.c`
+- `firmware/lib/keymaps/*` - Reference complete keymaps
+
+### gitignore Suggestions
+```gitignore
+# Build artifacts
+firmware/build/
+*.o
+*.elf
+*.hex
+*.map
+*.lst
+
+# KiCad backups
+hardware/kicad/*-backups/
+hardware/kicad/*-cache.lib
+hardware/kicad/fp-info-cache
+
+# Editor files
+*.swp
+*~
+.vscode/
+.DS_Store
+
+# User-specific configs (optional)
+# firmware/src/keymap.c
+# firmware/src/macros.c
+```
+
+This structure provides clear separation between:
+- **Hardware** (PCB, case, datasheets)
+- **Firmware** (source, bootloader, library, tools)
+- **Documentation** (guides, specs, assembly)
+- **Examples** (reference configurations)urations)
