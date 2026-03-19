@@ -6193,7 +6193,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2f0d2158-9428-4900-a995-7eaaad7c9fa7")
-		(property "Reference" "RLEDL4"
+		(property "Reference" "R5"
 			(at 33.02 45.974 90)
 			(effects
 				(font
@@ -6244,7 +6244,7 @@
 		(instances
 			(project "citrouille90"
 				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
-					(reference "RLEDL4")
+					(reference "R5")
 					(unit 1)
 				)
 			)
