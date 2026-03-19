@@ -2652,45 +2652,43 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "CitrouilleSymbolLibrary:USB mini b connector"
+		(symbol "CitrouilleSymbolLibrary:Mechanical_MountingHole"
 			(pin_names
-				(offset 0.254)
+				(offset 1.016)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "J"
-				(at 20.32 10.16 0)
+			(property "Reference" "H"
+				(at 0 5.08 0)
 				(effects
 					(font
-						(size 1.524 1.524)
+						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "USB mini b connector"
-				(at 20.32 7.62 0)
+			(property "Value" "Mechanical_MountingHole"
+				(at 0 3.175 0)
 				(effects
 					(font
-						(size 1.524 1.524)
+						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" "54819-0519_MOL"
+			(property "Footprint" ""
 				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
-						(italic yes)
 					)
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.molex.com/en-us/products/part-detail-pdf/548190519?display=pdf"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
-						(italic yes)
 					)
 					(hide yes)
 				)
@@ -2704,15 +2702,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "548190519"
+			(property "ki_fp_filters" "MountingHole*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2721,7 +2711,65 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "54819-0519_MOL"
+			(symbol "Mechanical_MountingHole_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 1.27)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector:USB_B_Mini"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at -5.08 11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "USB_B_Mini"
+				(at -5.08 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 3.81 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 3.81 -1.27 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "USB Mini Type B connector"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2730,13 +2778,43 @@
 					(hide yes)
 				)
 			)
-			(symbol "USB mini b connector_0_1"
+			(property "ki_keywords" "connector USB mini"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "USB*Mini*B*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "USB_B_Mini_0_1"
+				(rectangle
+					(start -5.08 -7.62)
+					(end 5.08 7.62)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
 				(polyline
 					(pts
-						(xy 7.62 5.08) (xy 7.62 -10.16)
+						(xy -4.699 5.842) (xy -4.699 5.588) (xy -4.445 4.826) (xy -4.445 4.572) (xy -1.651 4.572) (xy -1.651 4.826)
+						(xy -1.397 5.588) (xy -1.397 5.842) (xy -4.699 5.842)
 					)
 					(stroke
-						(width 0.127)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -2745,10 +2823,33 @@
 				)
 				(polyline
 					(pts
-						(xy 7.62 -10.16) (xy 33.02 -10.16)
+						(xy -4.318 5.588) (xy -1.778 5.588) (xy -2.032 4.826) (xy -4.064 4.826) (xy -4.318 5.588)
 					)
 					(stroke
-						(width 0.127)
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center -3.81 2.159)
+					(radius 0.635)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 2.159) (xy -2.54 2.159) (xy -1.27 3.429) (xy -0.635 3.429)
+					)
+					(stroke
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -2757,10 +2858,10 @@
 				)
 				(polyline
 					(pts
-						(xy 33.02 5.08) (xy 7.62 5.08)
+						(xy -2.54 2.159) (xy -1.905 2.159) (xy -1.27 0.889) (xy 0 0.889)
 					)
 					(stroke
-						(width 0.127)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -2769,19 +2870,146 @@
 				)
 				(polyline
 					(pts
-						(xy 33.02 -10.16) (xy 33.02 5.08)
+						(xy -1.905 2.159) (xy 0.635 2.159)
 					)
 					(stroke
-						(width 0.127)
+						(width 0.254)
 						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(pin power_in line
-					(at 0 0 0)
-					(length 7.62)
+				(circle
+					(center -0.635 3.429)
+					(radius 0.381)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -0.127 -7.62)
+					(end 0.127 -6.858)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0.254 1.27)
+					(end -0.508 0.508)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 2.794) (xy 0.635 1.524) (xy 1.905 2.159) (xy 0.635 2.794)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 5.08 4.953)
+					(end 4.318 5.207)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 5.08 -0.127)
+					(end 4.318 0.127)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 5.08 -2.667)
+					(end 4.318 -2.413)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 5.08 -5.207)
+					(end 4.318 -4.953)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "USB_B_Mini_1_1"
+				(pin passive line
+					(at -2.54 -10.16 90)
+					(length 2.54)
+					(name "Shield"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 5.08 180)
+					(length 2.54)
 					(name "VBUS"
 						(effects
 							(font
@@ -2798,8 +3026,26 @@
 					)
 				)
 				(pin bidirectional line
-					(at 0 -2.54 0)
-					(length 7.62)
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "D+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 7.62 -2.54 180)
+					(length 2.54)
 					(name "D-"
 						(effects
 							(font
@@ -2816,26 +3062,8 @@
 					)
 				)
 				(pin passive line
-					(at 40.64 0 180)
-					(length 7.62)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 40.64 -2.54 180)
-					(length 7.62)
+					(at 7.62 -5.08 180)
+					(length 2.54)
 					(name "ID"
 						(effects
 							(font
@@ -2844,24 +3072,6 @@
 						)
 					)
 					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 40.64 -5.08 180)
-					(length 7.62)
-					(name "D+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3439,107 +3649,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "PWR_FLAG_1"
-			(power)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "flag power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "PWR_FLAG_1_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_1_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+5V"
 			(power)
 			(pin_names
@@ -4047,7 +4156,7 @@
 	)
 	(text "ESD protection"
 		(exclude_from_sim no)
-		(at 31.242 56.134 0)
+		(at 29.972 66.294 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4112,7 +4221,7 @@
 	)
 	(text "USB connector"
 		(exclude_from_sim no)
-		(at 41.148 39.37 0)
+		(at 18.542 29.464 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4124,10 +4233,28 @@
 		(uuid "e277b69b-fbc5-4450-825f-8499134f1ce3")
 	)
 	(junction
-		(at 78.74 31.75)
+		(at 45.72 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "11257862-27ad-4c01-aef3-21947b112884")
+		(uuid "07a40bf7-31ae-4c89-a5b9-ce31f3850d79")
+	)
+	(junction
+		(at 40.64 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "09448c7d-f929-4328-8a79-d3160def6a77")
+	)
+	(junction
+		(at 45.72 46.99)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "21dc3f13-4837-427d-b9ea-35bb8c83bbbe")
+	)
+	(junction
+		(at 45.72 43.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2cb82b39-33c7-4eaa-a735-2c7070df8031")
 	)
 	(junction
 		(at 248.92 68.58)
@@ -4172,22 +4299,10 @@
 		(uuid "7bcf4e95-e712-4cee-a959-ddd6de171ea1")
 	)
 	(junction
-		(at 74.93 74.93)
+		(at 73.66 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "897efae2-6309-4200-af9c-d68ceca95845")
-	)
-	(junction
-		(at 265.43 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8b1db34c-5946-40db-903b-7cf1d2d4516b")
-	)
-	(junction
-		(at 27.94 31.75)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "958f36d3-0907-474b-bb9f-61f1af5b8348")
 	)
 	(junction
 		(at 111.76 78.74)
@@ -4214,7 +4329,7 @@
 		(uuid "fbc47c28-8dfc-4951-8694-68976baf500a")
 	)
 	(no_connect
-		(at 68.58 34.29)
+		(at 53.34 34.29)
 		(uuid "84f53303-6e13-4898-8375-99e9d46d368e")
 	)
 	(wire
@@ -4319,7 +4434,7 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 74.93) (xy 34.29 76.2)
+			(xy 33.02 85.09) (xy 33.02 86.36)
 		)
 		(stroke
 			(width 0)
@@ -4329,23 +4444,13 @@
 	)
 	(wire
 		(pts
-			(xy 27.94 34.29) (xy 26.67 34.29)
+			(xy 53.34 31.75) (xy 54.61 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "2b55f62e-7eca-48c3-b8b2-3203b457047b")
-	)
-	(wire
-		(pts
-			(xy 68.58 31.75) (xy 78.74 31.75)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2eba1732-06d4-4790-8f75-a888cab4b620")
 	)
 	(wire
 		(pts
@@ -4359,13 +4464,13 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 31.75) (xy 85.09 31.75)
+			(xy 45.72 39.37) (xy 45.72 40.64)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "38bd6172-9fbd-4bcd-b458-43a1d8c16398")
+		(uuid "394ec99c-99c0-4218-ac4b-35977059c9d4")
 	)
 	(wire
 		(pts
@@ -4399,7 +4504,7 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 31.75) (xy 27.94 31.75)
+			(xy 57.15 24.13) (xy 53.34 24.13)
 		)
 		(stroke
 			(width 0)
@@ -4489,6 +4594,16 @@
 	)
 	(wire
 		(pts
+			(xy 40.64 39.37) (xy 40.64 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5fe07886-cd02-4bc7-aefe-06ea681c25e0")
+	)
+	(wire
+		(pts
 			(xy 125.73 68.58) (xy 125.73 78.74)
 		)
 		(stroke
@@ -4509,7 +4624,17 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 74.93) (xy 74.93 74.93)
+			(xy 43.18 39.37) (xy 40.64 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "739a5a24-37db-4254-8d55-51755b7aef42")
+	)
+	(wire
+		(pts
+			(xy 76.2 85.09) (xy 73.66 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4539,6 +4664,16 @@
 	)
 	(wire
 		(pts
+			(xy 50.8 40.64) (xy 45.72 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d554488-4665-4355-9bb7-4eb1d00b9887")
+	)
+	(wire
+		(pts
 			(xy 156.21 43.18) (xy 176.53 43.18)
 		)
 		(stroke
@@ -4546,6 +4681,16 @@
 			(type default)
 		)
 		(uuid "8834fc70-25f0-47c2-a279-7142c23b1bc1")
+	)
+	(wire
+		(pts
+			(xy 38.1 43.18) (xy 38.1 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "997cae46-b8c3-44d4-a8b1-b64f8cb9f6ca")
 	)
 	(wire
 		(pts
@@ -4579,6 +4724,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 43.18) (xy 45.72 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad686731-409d-4170-8af1-0475e87e08fd")
+	)
+	(wire
+		(pts
 			(xy 111.76 78.74) (xy 125.73 78.74)
 		)
 		(stroke
@@ -4606,6 +4761,16 @@
 			(type default)
 		)
 		(uuid "bc63cfad-ba67-4f64-85cb-84577e274817")
+	)
+	(wire
+		(pts
+			(xy 45.72 46.99) (xy 45.72 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd81d538-e541-4bc9-bc84-a386567c7d34")
 	)
 	(wire
 		(pts
@@ -4639,16 +4804,6 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 63.5) (xy 270.51 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd801e4b-e114-4ee9-bffe-50b05101b35d")
-	)
-	(wire
-		(pts
 			(xy 248.92 68.58) (xy 254 68.58)
 		)
 		(stroke
@@ -4656,6 +4811,16 @@
 			(type default)
 		)
 		(uuid "cdff44dc-414b-414f-992f-1c7025bb6ff9")
+	)
+	(wire
+		(pts
+			(xy 40.64 43.18) (xy 38.1 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce7757fd-5a29-40e4-85f3-cb95f044a6ca")
 	)
 	(wire
 		(pts
@@ -4709,6 +4874,16 @@
 	)
 	(wire
 		(pts
+			(xy 45.72 48.26) (xy 45.72 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df470a57-5891-478c-80f2-a68f85359309")
+	)
+	(wire
+		(pts
 			(xy 237.49 40.64) (xy 248.92 40.64)
 		)
 		(stroke
@@ -4749,6 +4924,16 @@
 	)
 	(wire
 		(pts
+			(xy 54.61 29.21) (xy 53.34 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8f48117-702f-42fd-9a69-62cf0232a6ba")
+	)
+	(wire
+		(pts
 			(xy 115.57 58.42) (xy 111.76 58.42)
 		)
 		(stroke
@@ -4757,18 +4942,8 @@
 		)
 		(uuid "f956ea92-578e-425c-96ad-02fbb689aa4f")
 	)
-	(wire
-		(pts
-			(xy 68.58 36.83) (xy 69.85 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe1d7340-1425-4a2c-8727-e28d1e6486eb")
-	)
 	(label "D in-"
-		(at 34.29 62.23 180)
+		(at 33.02 72.39 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4778,7 +4953,7 @@
 		(uuid "054a1cd8-565e-4261-ac4d-d01d69d37dce")
 	)
 	(label "D out-"
-		(at 74.93 62.23 0)
+		(at 73.66 72.39 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4808,12 +4983,12 @@
 		(uuid "32222605-f726-419d-9c18-c4048c963875")
 	)
 	(label "VBUS"
-		(at 24.13 31.75 180)
+		(at 57.15 24.13 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "5419816b-0339-48c1-be23-858bdb713992")
 	)
@@ -4828,7 +5003,7 @@
 		(uuid "60930306-d53c-4fc4-9f07-ac977544b0c0")
 	)
 	(label "D out+"
-		(at 74.93 87.63 0)
+		(at 73.66 97.79 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4848,7 +5023,7 @@
 		(uuid "8762c68a-f01c-4669-b870-18030b5d7eb8")
 	)
 	(label "VBUS"
-		(at 77.47 74.93 0)
+		(at 76.2 85.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4868,7 +5043,7 @@
 		(uuid "b7036fa3-be76-4654-a502-9913dea6fa8b")
 	)
 	(label "D in+"
-		(at 69.85 36.83 0)
+		(at 54.61 29.21 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4878,12 +5053,12 @@
 		(uuid "d035799f-0d2c-41df-a04c-c0d82b2607e9")
 	)
 	(label "D in-"
-		(at 26.67 34.29 180)
+		(at 54.61 31.75 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "d6ca35c7-4054-4999-b924-615b21d39528")
 	)
@@ -4898,7 +5073,7 @@
 		(uuid "da8381e0-0aee-44d4-959a-9b265b1a1631")
 	)
 	(label "D in+"
-		(at 34.29 87.63 180)
+		(at 33.02 97.79 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5478,6 +5653,134 @@
 		)
 	)
 	(symbol
+		(lib_id "CitrouilleSymbolLibrary:Mechanical_MountingHole")
+		(at 85.09 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "03c8ff37-535e-44d2-b72d-ce92148f7314")
+		(property "Reference" "H7"
+			(at 87.63 105.4099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Mechanical_MountingHole"
+			(at 87.63 107.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 85.09 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "citrouille90"
+				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
+					(reference "H7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "CitrouilleSymbolLibrary:Mechanical_MountingHole")
+		(at 54.61 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0e75a7b0-9923-4e45-914b-18c118dd67b6")
+		(property "Reference" "H6"
+			(at 57.15 115.5699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Mechanical_MountingHole"
+			(at 57.15 118.1099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 54.61 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 54.61 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "citrouille90"
+				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
+					(reference "H6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 133.35 30.48 0)
 		(unit 1)
@@ -5882,6 +6185,72 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_Resistor_AKL:R_0805")
+		(at 41.91 46.99 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2f0d2158-9428-4900-a995-7eaaad7c9fa7")
+		(property "Reference" "RLEDL4"
+			(at 33.02 45.974 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1M"
+			(at 33.02 48.514 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "citrouille90 footprints:R_805"
+			(at 53.34 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "1/8 W"
+			(at 41.91 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 41.91 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "89642d36-c0be-4ae0-bfe3-8d772fdf2b4b")
+		)
+		(pin "2"
+			(uuid "2a4ff905-e5d4-4e61-b46e-2f55803d162f")
+		)
+		(instances
+			(project "citrouille90"
+				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
+					(reference "RLEDL4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5V")
 		(at 251.46 48.26 0)
 		(unit 1)
@@ -5964,7 +6333,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4,7u"
+		(property "Value" "4.7u"
 			(at 123.19 40.0113 0)
 			(effects
 				(font
@@ -6159,7 +6528,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 74.93 77.47 0)
+		(at 73.66 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6168,7 +6537,7 @@
 		(fields_autoplaced yes)
 		(uuid "4e64703c-a872-4bf6-9d0f-ba01b9739452")
 		(property "Reference" "C6"
-			(at 77.47 76.2062 0)
+			(at 76.2 86.3662 0)
 			(effects
 				(font
 					(size 1 1)
@@ -6177,7 +6546,7 @@
 			)
 		)
 		(property "Value" "100n"
-			(at 77.47 78.7462 0)
+			(at 76.2 88.9062 0)
 			(effects
 				(font
 					(size 1 1)
@@ -6186,7 +6555,7 @@
 			)
 		)
 		(property "Footprint" "capacitors:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 74.93 77.47 0)
+			(at 73.66 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6195,7 +6564,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 74.93 77.47 0)
+			(at 73.66 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6204,7 +6573,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 74.93 77.47 0)
+			(at 73.66 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6212,7 +6581,7 @@
 			)
 		)
 		(property "LCSC" ""
-			(at 74.93 77.47 0)
+			(at 73.66 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6230,6 +6599,86 @@
 			(project "amberclick90"
 				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
 					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:USB_B_Mini")
+		(at 45.72 29.21 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5241ff57-1f1b-483e-94e8-f2545f3fb5bd")
+		(property "Reference" "J3"
+			(at 45.72 16.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "USB mini b connector"
+			(at 45.72 19.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "citrouille90 footprints:usb mini connector"
+			(at 49.53 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.molex.com/en-us/products/part-detail-pdf/548190519?display=pdf"
+			(at 49.53 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "USB Mini Type B connector"
+			(at 45.72 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "70d22071-ee66-436c-aa0b-908d1806c491")
+		)
+		(pin "3"
+			(uuid "48860e86-8802-47e2-bb21-21238331839c")
+		)
+		(pin "6"
+			(uuid "7cd0ff79-eb3b-4265-b217-ca592750ae04")
+		)
+		(pin "1"
+			(uuid "d987e80e-5714-4c53-8c90-acd1597029af")
+		)
+		(pin "2"
+			(uuid "f1b24b28-0cad-4ae1-bd91-6bdae03d4e86")
+		)
+		(pin "4"
+			(uuid "b62f2eb0-ff97-449d-ba5a-d4786a47bf34")
+		)
+		(instances
+			(project ""
+				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -6538,6 +6987,70 @@
 		)
 	)
 	(symbol
+		(lib_id "CitrouilleSymbolLibrary:Mechanical_MountingHole")
+		(at 24.13 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5d3c4900-dcc3-4305-a2be-efdd26c439f0")
+		(property "Reference" "H2"
+			(at 26.67 110.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Mechanical_MountingHole"
+			(at 26.67 113.0299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 24.13 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 24.13 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 24.13 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "citrouille90"
+				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 205.74 119.38 0)
 		(unit 1)
@@ -6596,6 +7109,70 @@
 			(project "amberclick90"
 				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
 					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "CitrouilleSymbolLibrary:Mechanical_MountingHole")
+		(at 85.09 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "719223cd-6867-4fe4-9049-5dd55bb8e3e7")
+		(property "Reference" "H8"
+			(at 87.63 110.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Mechanical_MountingHole"
+			(at 87.63 113.0299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 85.09 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "citrouille90"
+				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
+					(reference "H8")
 					(unit 1)
 				)
 			)
@@ -6805,7 +7382,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 34.29 76.2 0)
+		(at 33.02 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6813,7 +7390,7 @@
 		(dnp no)
 		(uuid "786aeb13-f9d7-4d22-a2f0-6eb837cd804c")
 		(property "Reference" "#PWR024"
-			(at 34.29 82.55 0)
+			(at 33.02 92.71 0)
 			(effects
 				(font
 					(size 1 1)
@@ -6822,7 +7399,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 34.29 80.01 0)
+			(at 33.02 90.17 0)
 			(effects
 				(font
 					(size 1 1)
@@ -6830,7 +7407,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 34.29 76.2 0)
+			(at 33.02 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6839,7 +7416,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 34.29 76.2 0)
+			(at 33.02 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6848,7 +7425,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 34.29 76.2 0)
+			(at 33.02 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6875,7 +7452,7 @@
 	)
 	(symbol
 		(lib_id "AmberClickSymbolLibrary:USBLC6-2SC6")
-		(at 54.61 74.93 0)
+		(at 53.34 85.09 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6884,7 +7461,7 @@
 		(fields_autoplaced yes)
 		(uuid "7a1e46fc-1759-4089-b0c3-fa97a0d9bc36")
 		(property "Reference" "U2"
-			(at 54.61 54.61 0)
+			(at 53.34 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6892,7 +7469,7 @@
 			)
 		)
 		(property "Value" "USBLC6-2SC6"
-			(at 54.61 57.15 0)
+			(at 53.34 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6900,7 +7477,7 @@
 			)
 		)
 		(property "Footprint" "citrouille90 footprints:SOT-23-6"
-			(at 54.61 74.93 0)
+			(at 53.34 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6910,7 +7487,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 54.61 74.93 0)
+			(at 53.34 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6919,7 +7496,7 @@
 			)
 		)
 		(property "Description" "17V Clamp 5A (8/20µs) Ipp Tvs Diode Surface Mount SOT-23-6"
-			(at 54.61 74.93 0)
+			(at 53.34 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6929,7 +7506,7 @@
 			)
 		)
 		(property "MF" "STMicroelectronics"
-			(at 54.61 74.93 0)
+			(at 53.34 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6939,7 +7516,7 @@
 			)
 		)
 		(property "PURCHASE-URL" "https://pricing.snapeda.com/search/part/USBLC6-2SC6/?ref=eda"
-			(at 54.61 74.93 0)
+			(at 53.34 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6949,7 +7526,7 @@
 			)
 		)
 		(property "PACKAGE" "SOT-23-6 STMicroelectronics"
-			(at 54.61 74.93 0)
+			(at 53.34 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6959,7 +7536,7 @@
 			)
 		)
 		(property "PRICE" "None"
-			(at 54.61 74.93 0)
+			(at 53.34 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6969,7 +7546,7 @@
 			)
 		)
 		(property "MP" "USBLC6-2SC6"
-			(at 54.61 74.93 0)
+			(at 53.34 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6979,7 +7556,7 @@
 			)
 		)
 		(property "AVAILABILITY" "In Stock"
-			(at 54.61 74.93 0)
+			(at 53.34 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7667,7 +8244,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 78.74 31.75 0)
+		(at 45.72 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7675,7 +8252,7 @@
 		(dnp no)
 		(uuid "9c168a74-a9e5-4b19-ba1a-251aea19b093")
 		(property "Reference" "#PWR019"
-			(at 78.74 38.1 0)
+			(at 45.72 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7684,7 +8261,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 78.74 36.195 0)
+			(at 45.72 52.705 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7692,7 +8269,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 78.74 31.75 0)
+			(at 45.72 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7701,7 +8278,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 78.74 31.75 0)
+			(at 45.72 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7710,7 +8287,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 78.74 31.75 0)
+			(at 45.72 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7736,34 +8313,32 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 27.94 31.75 0)
+		(lib_id "Device:C_Small")
+		(at 43.18 43.18 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9e69d73c-2322-42f8-97b2-492c11e79495")
-		(property "Reference" "#FLG01"
-			(at 27.94 29.845 0)
+		(uuid "9d6b75b5-33ea-4320-b82d-02fcfdc01a05")
+		(property "Reference" "C3"
+			(at 43.1736 36.83 90)
 			(effects
 				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 27.94 26.035 0)
-			(effects
-				(font
-					(size 1.27 1.27)
+					(size 1 1)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 27.94 31.75 0)
+		(property "Value" "4.7n"
+			(at 34.544 43.18 90)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "capacitors:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 43.18 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7772,7 +8347,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 27.94 31.75 0)
+			(at 43.18 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7781,20 +8356,96 @@
 			)
 		)
 		(property "Description" ""
-			(at 27.94 31.75 0)
+			(at 43.18 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 43.18 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "2e7c89b2-9fb3-42a0-a1d0-4f2ae13653c6")
+			(uuid "21e859cb-639a-40f3-9dc1-32338a0d9304")
+		)
+		(pin "2"
+			(uuid "099b5759-4775-4ce9-885f-a200472e5882")
 		)
 		(instances
 			(project "citrouille90"
 				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
-					(reference "#FLG01")
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "CitrouilleSymbolLibrary:Mechanical_MountingHole")
+		(at 24.13 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab6acb06-cb04-4516-97aa-defa36f4d5ca")
+		(property "Reference" "H1"
+			(at 26.67 105.4099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Mechanical_MountingHole"
+			(at 26.67 107.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 24.13 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 24.13 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 24.13 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
+					(reference "H1")
 					(unit 1)
 				)
 			)
@@ -7866,7 +8517,7 @@
 	)
 	(symbol
 		(lib_id "power:GNDPWR")
-		(at 85.09 31.75 0)
+		(at 50.8 40.64 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7875,7 +8526,7 @@
 		(fields_autoplaced yes)
 		(uuid "ae7c0ed9-c5ba-4a47-8c40-3d33da00c4b1")
 		(property "Reference" "#PWR018"
-			(at 85.09 36.83 0)
+			(at 50.8 45.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7884,7 +8535,7 @@
 			)
 		)
 		(property "Value" "GNDPWR"
-			(at 84.963 36.195 0)
+			(at 50.673 45.085 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7892,7 +8543,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 85.09 33.02 0)
+			(at 50.8 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7901,7 +8552,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 85.09 33.02 0)
+			(at 50.8 41.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7910,7 +8561,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 85.09 31.75 0)
+			(at 50.8 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7930,6 +8581,70 @@
 			(project ""
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "CitrouilleSymbolLibrary:Mechanical_MountingHole")
+		(at 24.13 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "baa66510-5ae0-454c-9c44-fbf2ba033bf7")
+		(property "Reference" "H3"
+			(at 26.67 115.5699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Mechanical_MountingHole"
+			(at 26.67 118.1099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 24.13 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 24.13 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 24.13 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "citrouille90"
+				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -8078,6 +8793,70 @@
 		)
 	)
 	(symbol
+		(lib_id "CitrouilleSymbolLibrary:Mechanical_MountingHole")
+		(at 54.61 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d3009988-288d-4eed-9d91-ee3af54fa965")
+		(property "Reference" "H5"
+			(at 57.15 110.4899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Mechanical_MountingHole"
+			(at 57.15 113.0299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 54.61 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 54.61 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "citrouille90"
+				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
+					(reference "H5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 205.74 114.3 90)
 		(unit 1)
@@ -8216,179 +8995,35 @@
 		)
 	)
 	(symbol
-		(lib_name "PWR_FLAG_1")
-		(lib_id "power:PWR_FLAG")
-		(at 270.51 63.5 0)
+		(lib_id "CitrouilleSymbolLibrary:Mechanical_MountingHole")
+		(at 85.09 116.84 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "deee945c-897e-440b-830f-1f9590cdd896")
-		(property "Reference" "#FLG03"
-			(at 270.51 61.595 0)
+		(uuid "ec83ddd9-448d-4ea1-849c-238a837c0087")
+		(property "Reference" "H9"
+			(at 87.63 115.5699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(hide yes)
+				(justify left)
 			)
 		)
-		(property "Value" "PWR_FLAG"
-			(at 270.51 58.42 0)
+		(property "Value" "Mechanical_MountingHole"
+			(at 87.63 118.1099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 270.51 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 270.51 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 270.51 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "11bfdfd1-0553-494b-999b-1f7ef33eb83d")
-		)
-		(instances
-			(project ""
-				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
-					(reference "#FLG03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "CitrouilleSymbolLibrary:USB mini b connector")
-		(at 27.94 31.75 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e4de1973-97d9-45de-bcc9-fc674f0c2363")
-		(property "Reference" "J3"
-			(at 48.26 21.59 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Value" "USB mini b connector"
-			(at 48.26 24.13 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Footprint" "citrouille90 footprints:usb mini connector"
-			(at 27.94 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.molex.com/en-us/products/part-detail-pdf/548190519?display=pdf"
-			(at 27.94 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 27.94 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "dccf568d-4c23-441f-a2d8-f16080842c64")
-		)
-		(pin "4"
-			(uuid "e6da74e7-5547-4270-8d10-64a94700d368")
-		)
-		(pin "1"
-			(uuid "2b94aa67-f35b-43bf-8ba9-cb28770befdd")
-		)
-		(pin "2"
-			(uuid "0c789f94-c7d6-43f8-9e9b-869f72789ed7")
-		)
-		(pin "5"
-			(uuid "e5920cb4-94c6-49f6-b2f4-7367353637b3")
-		)
-		(instances
-			(project ""
-				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 74.93 80.01 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f2562abe-12ea-491f-8ec6-c3c4d10e65fb")
-		(property "Reference" "#PWR05"
-			(at 74.93 86.36 0)
-			(effects
-				(font
-					(size 1 1)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 74.93 83.82 0)
-			(effects
-				(font
-					(size 1 1)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 74.93 80.01 0)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 85.09 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8397,7 +9032,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 80.01 0)
+			(at 85.09 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8406,7 +9041,69 @@
 			)
 		)
 		(property "Description" ""
-			(at 74.93 80.01 0)
+			(at 85.09 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "citrouille90"
+				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
+					(reference "H9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 73.66 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f2562abe-12ea-491f-8ec6-c3c4d10e65fb")
+		(property "Reference" "#PWR05"
+			(at 73.66 96.52 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 73.66 93.98 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 73.66 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 73.66 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 73.66 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8567,8 +9264,72 @@
 			)
 		)
 	)
+	(symbol
+		(lib_id "CitrouilleSymbolLibrary:Mechanical_MountingHole")
+		(at 54.61 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f9ab6186-4491-4e84-b0a3-e4f52d0d3122")
+		(property "Reference" "H4"
+			(at 57.15 105.4099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Mechanical_MountingHole"
+			(at 57.15 107.9499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 54.61 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 54.61 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 54.61 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "citrouille90"
+				(path "/c86327b6-dcc1-4fd8-bf25-f8809a0ceda7"
+					(reference "H4")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(sheet
-		(at 99.06 96.52)
+		(at 105.41 128.27)
 		(size 33.02 11.43)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8584,7 +9345,7 @@
 		)
 		(uuid "c3a79efc-a178-473f-aa36-c0c32b3ea173")
 		(property "Sheetname" "Keyswitch Matrix and encoder"
-			(at 99.06 95.8084 0)
+			(at 105.41 127.5584 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8593,7 +9354,7 @@
 			)
 		)
 		(property "Sheetfile" "matrix.kicad_sch"
-			(at 99.06 108.5346 0)
+			(at 105.41 140.2846 0)
 			(effects
 				(font
 					(size 1.27 1.27)
