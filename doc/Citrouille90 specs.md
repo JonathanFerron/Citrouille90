@@ -12,12 +12,10 @@ Key characteristics:
 * Dedicated hardware reset button (6mm × 6mm through-hole tact switch)
 * USB Full-Speed device (keyboard + bootloader)
 * Amber LEDs (1 power LED + 2 PWM indicator LEDs)
-* Minimalist black PCB, minimal grey or orange 3D-printed case
+* Minimalist PCB, minimal 3D-printed sandwich case
 * Firmware-driven bootloader entry (software reset via key combination)
-* Hardware reset via dedicated tact switch (3D printed pin accessory accessible)
+* Hardware reset via dedicated tact switch
 * Toolchain: avr-gcc compiler, UPDI flashing software = avrdude with serialupdi, USB flashing software custom (could be simple python script)
-
-This document consolidates **the current design decisions** made throughout the design discussion.
 
 In general we want to borrow from QMK, DxCore, MCC, LUFA, TinyUSB the ideas that still apply well to the AVR-DU, and enhance or adapt where it makes sense.
 
@@ -30,11 +28,8 @@ In general we want to borrow from QMK, DxCore, MCC, LUFA, TinyUSB the ideas that
 Reasons:
 
 * Native USB Full-Speed (no external USB PHY)
-* Adequate flash/RAM for keyboard firmware
-* Sufficient GPIO count for 90-key matrix + encoder + LEDs
 * UPDI programming and recovery
 * Supports USB HID natively
-* No external USB-to-serial chip required
 * 32 pins total: 23 usable GPIO
 
 Specifications:
@@ -42,11 +37,6 @@ Specifications:
 * 24 MHz clock
 * 64 KB Flash
 * 8 KB SRAM
-
-Power & voltage:
-
-* Operates at 5V input (from USB VBUS)
-* Internal regulator provides VUSB (3.3V USB core)
 
 ---
 
@@ -63,7 +53,7 @@ Decoupling:
 * Local decoupling near MCU pins:
   * 2× 100nF ceramic at VDD pins (pins 18, 28)
   * 1× 100nF ceramic at VUSB pin (pin 6)
-* Total capacitance: 4.7µF + 0.3µF = 5.0µF (safely under USB 10µF maximum)
+* Total capacitance: 4.7µF + 0.5µF = 5.2µF (safely under USB 10µF maximum)
 * VUSB pin decoupled to ground only (no external load)
 
 ---
@@ -72,16 +62,9 @@ Decoupling:
 
 * USB Full-Speed device
 * USB Mini-B connector (through-hole)
-* 500mA polyfuse for overcurrent protection (e.g., Bourns MF-MSMF050-2)
-* USB ESD protection IC (e.g., USBLC6-2SC6 in SOT-23-6)
-  * Place within 5mm of USB connector
-  * Protects D+, D-, and optionally VBUS
-* Short, straight D+ / D− routing (no series resistors needed - integrated in AVR-DU)
-* Match D+/D− trace lengths, 90Ω differential impedance if possible
-* No external oscillator required (internal oscillator + USB clock recovery)
-* Bare-metal approach
 
-Bootloader (KeyDU.BL) exposes USB interface (Vendor defined class). Keyboard app (Citrouille.KBapp) exposes USB HID interface.
+Bootloader (KeyDU.BL) exposes USB interface (Vendor defined class). 
+Keyboard app (Citrouille.KBapp) exposes USB HID interface.
 
 ### 4.1 USB Device Modes
 
@@ -265,6 +248,7 @@ The host can deliver this either via the EP1 OUT endpoint or via a `SET_REPORT` 
 * Kailh Choc low-profile switches
 * Diode per switch
 * Column output low to row input pull-up scanning
+* matrix scan rate: 200 Hz, or once every 5 ms
 
 ### Matrix GPIO allocation
 
@@ -320,8 +304,6 @@ Three reset methods available (one hardware, two software):
 * **6mm × 6mm through-hole tact switch**
 * Mounted on PCB (corner top right)
 * Wired directly to **RESET pin** (pin 26) with switch series resistor (330 ohm) and 0.1uF cap as per datasheet
-* Accessible via small hole (3mm diameter) in switch plate
-* Requires peg tool for access
 * Provides emergency recovery if firmware hangs or software reset fails
 * Always functional regardless of firmware state
 * silkscreen: "RESET"
@@ -379,7 +361,6 @@ Three reset methods available (one hardware, two software):
 * Fixed resistor (no GPIO, no PWM)
 * Resistor value chosen for 1.4 mA, hence 2200 ohm
 * Target: dim but non annoying in very dim environment, still visible (though dim) in brightly lit room
-* Resistor: 2.2kΩ (based on actual LED Vf testing)
 * Resistor placed close to LED (not MCU) to reduce EMI and simplify rework
 
 ### 8.2 Indicator LEDs (2×)
@@ -406,8 +387,13 @@ Brightness control:
 PWM implementation:
 
 * Use TCA timer (can drive both LEDs)
-* PWM frequency chosen to avoid interaction with matrix scan (~1 kHz)
-* Avoid visible flicker (>100 Hz)
+* PWM frequency: 1,465 Hz
+
+```c
+// New (1.465 kHz):
+TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV64_gc;  // Prescaler 64
+// f_PWM = 24 MHz / (64 × 256) = 1,465 Hz
+```
 
 ---
 
@@ -434,56 +420,34 @@ RESET and UPDI pins are not counted as GPIO (dedicated functions).
 
 UPDI header:
 
-* Placed at PCB edge (top edge preferred for easier 3D case design)
+* Placed at PCB edge (top edge preferred)
 * Mandatory for unbrick / development
 * 3 pins: GND, UPDI, VCC (see AVR-DU datasheet for pinout)
 * **Never disable UPDI in fuses**
 
 ---
 
-## 11. LED Electrical Design
+## 11. Bootloader Size Expectations
 
-* IO pin max current: 50 mA absolute maximum (per datasheet)
-
-Design practice:
-
-* LED current limited with resistor
-* GPIO LED currents kept well below limits
-* Power LED: very low current, fixed
-
-PWM control in firmware for dimming indicator LEDs.
+* ~2–6 kB
+* Reserve 8 kB
 
 ---
 
-## 12. Firmware Size Expectations
-
-Estimated keyboard firmware (3 layers + macros + encoder):
-
-* ~15–25 kB flash
-
-Bootloader size:
-
-* ~2–6 kB (≈3–10% of flash)
-* Reserve 8 kB for bootloader
-
-Plenty of margin on AVR64DU32 (64 kB total flash).
-
----
-
-## 13. Physical Layout Notes
+## 12. Physical Layout Notes
 
 * USB connector on top edge, aligned with middle of function key row
 * Encoder located top-left
-* Three LEDs arranged horizontally near top edge offset to the right (power LED in middle)
-* Hardware reset via dedicated tact switch (paperclip access)
-* UPDI header at PCB edge (top edge preferred for easier 3D case integration)
-* Black 2-layer PCB
-* Grey 3D-printed case
+* Three LEDs arranged horizontally near top edge offset to the right
+* Hardware reset via dedicated tact switch
+* UPDI header at PCB edge
+* 2-layer PCB
+* 3D-printed case
 * Low-profile design due to Kailh Choc switches
 
 ---
 
-## 14. Branding & Logo
+## 13. Branding & Logo
 
 * Name: **Citrouille90**
 * Trim: **(AVRDU.Enc.Choc)**
@@ -497,9 +461,9 @@ Logo placement: Bottom layer silkscreen
 
 ---
 
-## 15. Firmware Architecture
+## 14. Firmware Architecture
 
-### 15.1 Layers & Features
+### 14.1 Layers & Features
 
 * 3 layers:
   * Layer 0: Base layer (default)
@@ -508,7 +472,7 @@ Logo placement: Bottom layer silkscreen
 * Support for small macros (e.g., Ctrl+C, Ctrl+V, Alt-Tab sequences)
 * 6KRO (6-key rollover) USB HID
 
-### 15.2 Development Approach
+### 14.2 Development Approach
 
 * Bare-metal approach + USB stack
 * avr-gcc toolchain
@@ -517,13 +481,13 @@ Logo placement: Bottom layer silkscreen
 * Small hardware abstraction layer (HAL) for GPIO, timers, matrix scanning
 * LUFA and MCC code provide examples for USB enumeration and HID keyboard reports
 
-### 15.3 USB HID Descriptor
+### 14.3 USB HID Descriptor
 
 * Setup USB HID descriptor for standard keyboard
 * 6KRO implementation (boot protocol compatible)
 * Device strings: "Citrouille90" or similar
 
-### 15.4 Memory Layout
+### 14.4 Memory Layout
 
 Typical pattern:
 
@@ -549,7 +513,7 @@ Application firmware:
 * Keyboard logic
 * Starts at 0x2000
 
-### 15.5 Data Storage Strategy
+### 14.5 Data Storage Strategy
 
 **Flash (persistent, read-only at runtime):**
 
@@ -580,21 +544,21 @@ On AVR Dx/DU:
 
 ---
 
-## 16. Encoder Implementation
+## 15. Encoder Implementation
 
-### 16.1 Encoder Hardware
+### 15.1 Encoder Hardware
 
 * PES12 rotary encoder (no integrated push switch)
 * Quadrature outputs: A, B
 * Mechanical encoder with (optionally) tactile detents
 
-### 16.2 Encoder Decoding Logic
+### 15.2 Encoder Decoding Logic
 
 * Quadrature decoder using state machine (recommended)
 * State table-driven or bitwise decode
-* Sample at matrix scan rate (1–2 kHz)
+* Sample at matrix scan rate (200 Hz)
 
-### 16.3 Encoder Behavior Examples
+### 15.3 Encoder Behavior Examples
 
 * Volume control (CW: volume up, CCW: volume down)
 * Alt-Tab with session logic:
@@ -605,7 +569,7 @@ On AVR Dx/DU:
 * Brightness control
 * Media timeline scrubbing
 
-### 16.4 Encoder Design Pattern
+### 15.4 Encoder Design Pattern
 
 Recommended approach (stored in flash):
 
@@ -626,7 +590,7 @@ const macro_t macros[] = {
 
 Runtime: Track encoder deltas, dispatch macro IDs.
 
-### 16.5 Encoder Considerations
+### 15.5 Encoder Considerations
 
 * **Bounce:** Mechanical encoders bounce more than keys
   
@@ -641,7 +605,7 @@ Runtime: Track encoder deltas, dispatch macro IDs.
 
 * **GPIO configuration:** Configure encoder pins with internal pull-ups enabled
 
-### 16.6 Encoder Integration
+### 15.6 Encoder Integration
 
 * Scan encoders in same loop as matrix scanning
 * Sample encoder pins each scan, decode transitions
@@ -649,7 +613,7 @@ Runtime: Track encoder deltas, dispatch macro IDs.
 
 ---
 
-## 17. Component List Summary
+## 16. Component List Summary
 
 **MCU:**
 
@@ -672,13 +636,13 @@ Runtime: Track encoder deltas, dispatch macro IDs.
 **USB:**
 
 * 1× USB Mini-B connector (through-hole)
-* 1× 500mA polyfuse (e.g., Bourns MF-MSMF050-2)
-* 1× USB ESD protection IC (e.g., usblc6-2, SOT-23-6)
+* 1× 500mA polyfuse (Bourns PTC RESET FUSE 15V 500MA 1812)
+* 1× USB ESD protection IC (usblc6-2, SOT-23-6)
 
 **Capacitors:**
 
-* 1× 4.7µF ceramic capacitor (bulk, X7R/X5R, 10v or 16V, 1206)
-* 5× 100nF ceramic capacitors (decoupling at MCU: 2× VDD, 1× VUSB, 1x ESD protection decoupling, 1x reset switch cap)
+* 1× 4.7µF ceramic capacitor (bulk, X7R, 16V, 1206)
+* 5× 100nF ceramic capacitors (decoupling at MCU: 2× VDD, 1× VUSB, 1x ESD protection decoupling, 1x reset switch cap), 0805
 
 **LEDs:**
 
@@ -702,42 +666,28 @@ Runtime: Track encoder deltas, dispatch macro IDs.
 
 **Case:**
 
-* 3D-printed grey case (bottom & sides, switch plate)
-* Rubber feet or case pads
+* 3D-printed case (bottom & switch plate)
+* Rubber feet
 
 ---
 
-## 18. Next Steps
+## 17. Next Steps
 
-### 18.1 Immediate Tasks
+### 17.1 Immediate Tasks
 
 1. **PCB layout**
-   
-   * Component placement
-   * Route USB D+/D− carefully (short, matched length)
    * Minimalist silkscreen with logo
-   * 0.05mm grid, or even 0.01mm when working between mcu pads
-   * trace width: 
-      * power 0.5mm, 0.1mm when routing between mcu pads
-      * usb 0.25mm traces with 0.25mm spacing between d+ and d-, 0.5mm of ground pour between USB differential pair and other signals, especially pwm
-      * led 0.25mm, and 0.1mm when routing between mcu pads
-      * signal 0.20mm everywhere, and 0.1mm when routing between mch pads
 
-2. **Design 3D-printed case** (after PCB dimensions locked)
+2. **Design 3D-printed case**
    
-   * Grey filament
-   * Switch plate for Kailh Choc switches (1.2mm or 1.3mm thickness)
+   * Switch plate for Kailh Choc switches (2.2mm thickness)
    * Bottom case, use sandwitch mount
-   * Reset button access hole
-   * USB connector cutout
-   * UPDI header access
-   * LED light pipes or diffusers
    * Encoder knob
 
 3. **Firmware development**
 
    * Setup avr-gcc toolchain
-   * Study DxCore examples for AVR-DU
+   * Study DxCore and MCC examples for AVR-DU
    * Write startup code and linker scripts
    * Develop HAL layer
    * Create USB HID stack
@@ -747,7 +697,7 @@ Runtime: Track encoder deltas, dispatch macro IDs.
    * Implement macro system
    * Implement LED PWM control
 
-### 18.2 Design Decisions to Finalize
+### 17.2 Design Decisions to Finalize
 
 1. **Debouncing approach:**
    
@@ -760,79 +710,37 @@ Runtime: Track encoder deltas, dispatch macro IDs.
    * Finalize Alt-Tab session logic
    * GPIO pull-up configuration
 
-### 18.3 Documentation to Create
+### 17.3 Documentation to Create
 
 * BOM.md (Bill of Materials with part numbers)
-* ASSEMBLY.md (PCB assembly instructions)
-* BUILDING.md (Firmware build instructions)
-* FLASHING.md (Bootloader entry and flashing guide, document both reset methods)
+* PCBASSEMBLY.md (PCB assembly instructions)
+* FirmwareBUILDING.md (Firmware build instructions)
+* FLASHING.md (Bootloader entry and flashing guide)
 * RECOVERY.md (UPDI unbrick procedure)
 * CUSTOMIZATION.md (How to customize keymaps, macros, encoder behavior)
 
 ---
 
-## 19. Research & Development Notes
+## 18. Research & Development Notes
 
-### 19.1 Bootloader Details (KeyDU.BL)
+### 18.1 Bootloader Details (KeyDU.BL)
 
 * Vendor class bootloader
 * Device enumerates as USB vendor class
 * Requires LibUSB on PC
-* Firmware update via custom tool (to be developed in `tools/flash/`)
+* Firmware update via custom tool (to be located in `hostusbflashing`)
 
-### 19.2 UPDI Programming
+### 18.2 UPDI Programming
 
 * Never disable UPDI in fuses (critical for recovery)
 * Use serialupdi programmer with avrdude
-* Scripts in `tools/updi/` for bootloader and firmware flashing
+* Scripts in `hostupdiflashing` for bootloader and firmware flashing
 
 ---
 
-## 20. License
+## 19. License
 
-* PCB and case: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)
+* PCB and case: CERN-OHL-S v2 (Strongly Reciprocal)
+* Art work: Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)
 * Firmware: GNU General Public License version 3
 * Copyright (C) 2026 Jonathan Ferron
-
----
-
-**End of Technical Specification**lt-Tab "smart encoder" behavior with session logic
-* GPIO + pull-up configuration recommendations for encoders
-* Minimal scan loop for exact pin mapping
-
----
-
-## 22. License
-
-* PCB and case: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)
-* Firmware: GNU General Public License version 3
-* Copyright (C) 2026 Jonathan Ferron
-
----
-
-**End of Technical Specification**---
-
-**End of Technical Specification**adrature decoder for encoders
-* Design Alt-Tab "smart encoder" behavior with session logic
-* GPIO + pull-up configuration recommendations for encoders
-* Minimal scan loop for exact pin mapping
-* Comparison of row-driven vs column-driven scanning
-* Pull-ups vs pull-downs for matrix
-
----
-
-## 22. License
-
-* PCB and case: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)
-* Firmware: GNU General Public License version 3
-* Copyright (C) 2026 Jonathan Ferron
-
----
-
-**End of Technical Specification**: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)
-* Firmware: GNU General Public License version 3
-* Copyright (C) 2026 Jonathan Ferron
-
----
-
-**End of Technical Specification**
