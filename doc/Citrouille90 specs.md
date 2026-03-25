@@ -452,12 +452,6 @@ UPDI header:
 * Name: **Citrouille90**
 * Trim: **(AVRDU.Enc.Choc)**
 * Logo: "Citrouille90" text in **Playpen Sans font** combined with waveform graphic and pumpkin 
-* Aesthetic:
-  * Minimalist
-  * Technical / instrument-like
-  * Monochrome silkscreen
-
-Logo placement: Bottom layer silkscreen
 
 ---
 
@@ -744,3 +738,5 @@ Runtime: Track encoder deltas, dispatch macro IDs.
 * Art work: Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)
 * Firmware: GNU General Public License version 3
 * Copyright (C) 2026 Jonathan Ferron
+
+https://certification.oshwa.org/basics.html

@@ -2,12 +2,12 @@
 
 ## Overview
 
-This document outlines the systematic approach for exploring MCC-generated code, comparing it with other frameworks (DxCore, LUFA, TinyUSB, QMK, and a ClaudeAI-generated draft), and building a harmonious, minimalistic, bare-metal firmware for the AmberClick90 keyboard.
+This document outlines the systematic approach for exploring MCC-generated code, comparing it with other frameworks (DxCore, LUFA, TinyUSB, QMK, and a ClaudeAI-generated draft), and building a harmonious, minimalistic, bare-metal firmware for the Citrouille90 keyboard.
 
 **Core Philosophy:**
 - Bare metal, minimalistic approach
 - Easily readable and maintainable code
-- Internal harmony - no Frankenstein assemblies
+- Internal harmony
 - Learn from multiple sources, choose the best ideas intentionally
 
 ---
@@ -32,7 +32,7 @@ Generate MCC code in incremental complexity steps, each in its own folder for si
    - Goal: Understand matrix scanning independently
 
 1c. **Encoder only**
-   - Quadrature decoder (EC12 encoder)
+   - Quadrature decoder
    - GPIO configuration with pull-ups
    - UART debug output for rotation events
    - No USB - isolate encoder state machine
@@ -40,7 +40,7 @@ Generate MCC code in incremental complexity steps, each in its own folder for si
 
 2. **PWM LED pulse**
    - TCA timer configuration
-   - PWM generation for 2 indicator LEDs (PA4, PA5)
+   - PWM generation for 2 indicator LEDs
    - Goal: Understand timer/PWM setup
 
 3. **USB Vendor (Control EP0 only)**
@@ -73,7 +73,7 @@ Generate MCC code in incremental complexity steps, each in its own folder for si
    - Goal: Understand composite device descriptors
 
 8. **USB HID Composite Full**
-   - All 3 interfaces per AmberClick90 spec:
+   - All 3 interfaces per Citrouille90 spec:
      - Interface 0: Boot Keyboard
      - Interface 1: Boot Mouse
      - Interface 2: Extended Controls (Consumer + System)
@@ -87,7 +87,7 @@ Generate MCC code in incremental complexity steps, each in its own folder for si
    - Goal: Understand full integration without complexity of full matrix
 
 9. **Full feature set**
-   - Complete AmberClick90 implementation
+   - Complete Citrouille90 implementation
    - All 3 USB interfaces
    - Full 10×9 matrix
    - Encoder
@@ -97,27 +97,7 @@ Generate MCC code in incremental complexity steps, each in its own folder for si
 ### Future Exploration (Optional)
 
 - **USB CDC** - Serial port for debugging (not in final product)
-- **Interrupt vs Polling** - Compare code complexity and performance
 
----
-
-## Folder Organization
-
-```
-mcc-exploration/
-├── 01-bare-blink/
-├── 01b-matrix-only/
-├── 01c-encoder-only/
-├── 02-pwm-pulse/
-├── 03-usb-vendor-control/
-├── 04-usb-vendor-bulk/
-├── 05-usb-hid-boot-kbd/
-├── 05b-usb-kbd-encoder/
-├── 06-usb-hid-report-kbd/
-├── 07-usb-composite-kbd-mouse/
-├── 08-usb-composite-full/
-├── 08b-usb-composite-minimal/
-└── 09-full-feature/
 ```
 
 ---
@@ -259,7 +239,7 @@ Use diff tools to compare:
 - Timing for scanning/debounce
 
 #### LEDs
-- PWM LED control (PA4, PA5)
+- PWM LED control
 - Brightness adjustment
 - LED state tracking
 
@@ -268,52 +248,6 @@ Use diff tools to compare:
 - Vendor class implementation
 - Flash write operations
 - Application jump
-
----
-
-### Tab 2: Code Size Tracking
-
-**Purpose:** Track code size impact of each feature addition
-
-**Columns:**
-- Variation Name (1, 1b, 1c, 2, 3, etc.)
-- Flash Used (bytes)
-- Flash Used (%)
-- RAM Used (bytes)
-- RAM Used (%)
-- Delta from Previous (Flash)
-- Delta from Previous (RAM)
-- Notes (what changed)
-
-**Usage:** Understand the cost of each feature, but remember: if a feature needs to be there, it needs to be there. This is for understanding, not necessarily optimization.
-
----
-
-### Tab 3: File Structure Comparison
-
-**Purpose:** Map where different frameworks organize similar functionality
-
-**Columns:**
-- File Category
-- MCC File(s)
-- DxCore File(s)
-- LUFA File(s)
-- TinyUSB File(s)
-- QMK File(s)
-- ClaudeAI Draft File(s)
-- My Project File(s)
-
-**Categories:**
-- USB Descriptors
-- USB Stack Core
-- HID Reports
-- Matrix Scanning
-- Encoder Handling
-- Timer/PWM
-- GPIO/HAL
-- Initialization
-- Main Loop
-- Utilities
 
 ---
 
@@ -1080,7 +1014,7 @@ The ClaudeAI-generated draft serves as a unique reference point:
 
 **Advantages:**
 - Generated as cohesive whole - internal consistency by design
-- Tailored to AmberClick90 specs specifically
+- Tailored to Citrouille90 specs specifically
 - Represents one complete harmonious solution
 - Shows how different pieces can work together
 
@@ -1155,10 +1089,8 @@ You'll know you've succeeded when:
 
 ## Notes
 
-- **Power LED:** Hardwired to VBUS+GND (with current limiting resistor), not MCU-controlled
-- **Indicator LEDs:** PA4, PA5 with PWM via TCA
+- **Indicator LEDs:** With PWM via TCA
 - **Code Size:** If a feature needs to be there, it needs to be there - focus on understanding, not premature optimization
-- **Spreadsheet Tool:** Use freeze panes to keep headers visible
 - **Tab Growth:** Start with single comprehensive tabs; split only if they become unwieldy (>100 rows)
 
 ---
