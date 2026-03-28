@@ -670,6 +670,7 @@ Runtime: Track encoder deltas, dispatch macro IDs.
 ### 17.1 Immediate Tasks
 
 1. **PCB layout**
+   
    * Minimalist silkscreen with logo
 
 2. **Design 3D-printed case**
@@ -679,7 +680,7 @@ Runtime: Track encoder deltas, dispatch macro IDs.
    * Encoder knob
 
 3. **Firmware development**
-
+   
    * Setup avr-gcc toolchain
    * Study DxCore and MCC examples for AVR-DU
    * Write startup code and linker scripts
