@@ -23,20 +23,7 @@ Generate MCC code in incremental complexity steps, each in its own folder for si
    - Clock configuration (24 MHz)
    - Simple GPIO toggle
    - Goal: Understand initialization and basic GPIO
-
-1b. **Matrix scanning only**
-   - 10 rows × 9 columns GPIO setup
-   - Matrix scan algorithm
-   - UART debug output for key states
-   - No USB - isolate matrix scanning code
-   - Goal: Understand matrix scanning independently
-
-1c. **Encoder only**
-   - Quadrature decoder
-   - GPIO configuration with pull-ups
-   - UART debug output for rotation events
-   - No USB - isolate encoder state machine
-   - Goal: Understand encoder implementation independently
+   - understand gpio operations that will be needed for matrix scanning and encoder quadrature decoding
 
 2. **PWM LED pulse**
    - TCA timer configuration
@@ -58,11 +45,6 @@ Generate MCC code in incremental complexity steps, each in its own folder for si
    - Standard 8-byte keyboard report
    - Goal: Understand HID keyboard basics
 
-5b. **USB HID Boot Keyboard + Encoder**
-   - Integrate encoder with HID keyboard
-   - Encoder → HID report mapping
-   - Goal: Understand peripheral integration with USB
-
 6. **USB HID Report Keyboard**
    - Report protocol keyboard
    - Goal: Understand report vs boot protocol differences
@@ -80,23 +62,13 @@ Generate MCC code in incremental complexity steps, each in its own folder for si
    - 3 IN endpoints
    - Goal: Understand complete multi-interface USB implementation
 
-8b. **USB Composite + Matrix + Encoder (minimal)**
-   - Full USB stack (3 interfaces)
-   - Simplified 3×3 matrix instead of 10×9
-   - Encoder integration
-   - Goal: Understand full integration without complexity of full matrix
-
 9. **Full feature set**
    - Complete Citrouille90 implementation
    - All 3 USB interfaces
-   - Full 10×9 matrix
-   - Encoder
+   - Full 10×9 matrix with scanning
+   - Encoder: Integrate encoder with HID keyboard, Encoder → HID report mapping
    - 2 PWM LEDs
    - Goal: Complete reference implementation
-
-### Future Exploration (Optional)
-
-- **USB CDC** - Serial port for debugging (not in final product)
 
 ```
 

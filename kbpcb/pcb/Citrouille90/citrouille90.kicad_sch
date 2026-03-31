@@ -7708,7 +7708,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Fuse"
 			(at 109.22 35.56 0)
 			(effects
 				(font
@@ -9040,7 +9040,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "M2.5"
 			(at 85.09 116.84 0)
 			(effects
 				(font
@@ -9166,7 +9166,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "RESET"
 			(at 109.22 68.58 0)
 			(effects
 				(font
