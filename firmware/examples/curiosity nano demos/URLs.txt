@@ -1,0 +1,11 @@
+1. https://github.com/microchip-pic-avr-examples/avr64du32-cnano-usb-hid-matrix-keypad-mplab-mcc
+
+2. https://github.com/microchip-pic-avr-examples/avr64du32-keypad-mplab-mcc
+
+3. https://github.com/microchip-pic-avr-examples/avr64du32-cnano-usb-vendor-mplab-mcc
+
+4. https://github.com/microchip-pic-avr-examples/avr64du32-cnano-usb-hid-keyboard-mplab-mcc
+
+5. https://github.com/microchip-pic-avr-examples/avr64du32-cnano-hid-keyboard-alternatives-mplab-mcc
+
+6. https://github.com/microchip-pic-avr-examples/avr64du32-cnano-usb-hid-mouse-mplab-mcc

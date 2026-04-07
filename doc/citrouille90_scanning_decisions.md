@@ -90,7 +90,7 @@
 ### Final Pseudocode
 
 ```
-CONSTANT LOCKOUT_MS = 3
+CONSTANT LOCKOUT_MS = 2
 
 // 16-entry lookup table
 // index = (prev_ab << 2) | curr_ab
@@ -120,44 +120,43 @@ accumulator   = 0
 lockout_timer = 0
 
 
-FUNCTION encoder_scan():            // called once every 1ms from main scan loop
+FUNCTION encoder_scan():             // called once every 1ms from main scan loop
 
-    // 1. Decrement lockout timer unconditionally
+    // Decrement lockout timer
     IF lockout_timer > 0 THEN
         lockout_timer -= 1
     END IF
 
-    // 2. Read current pin state
-    curr_ab = read pins A,B
-
-    // 3. Early exit during lockout, but keep prev_ab current
+    // Early exit during lockout — prev_ab held at last known good state
     IF lockout_timer > 0 THEN
-        prev_ab = curr_ab
         RETURN
     END IF
 
-    // 4. Build lookup index
-    index = (prev_ab << 2) | curr_ab
+    // Read current pin state
+    curr_ab = read pins A,B
 
-    // 5. Look up transition value
-    delta = lookup[index]
-
-    // 6. No change — early exit
+    // No change — early exit
     IF curr_ab == prev_ab THEN
         RETURN
     END IF
 
-    // 7. Illegal transition — reset accumulator, stay anchored to last good state
+    // Build lookup index
+    index = (prev_ab << 2) | curr_ab
+
+    // Look up transition value
+    delta = lookup[index]
+
+    // Illegal transition — reset accumulator, stay anchored to last good state
     IF delta == 0 THEN
         accumulator = 0
         RETURN
     END IF
 
-    // 8. Valid transition — accumulate and update state
+    // Valid transition — accumulate and update state
     accumulator += delta
     prev_ab = curr_ab
 
-    // 9. Check for completed full quadrature cycle
+    // Check for completed full quadrature cycle
     IF accumulator >= +4 THEN
         accumulator = 0
         emit_step(CW)
@@ -173,12 +172,10 @@ FUNCTION encoder_scan():            // called once every 1ms from main scan loop
 
 ### Key Design Notes
 
-**prev_ab not updated on illegal transition (step 7):** anchors the state machine to the last known good state so the next valid reading is evaluated against a clean baseline.
+**prev_ab not updated on illegal transition:** anchors the state machine to the last known good state so the next valid reading is evaluated against a clean baseline.
 
-**Lockout timer decremented before the lockout check (steps 1 and 3):** if the timer reaches zero in step 1, execution falls through to full decode logic immediately in the same scan cycle — no one-cycle delay.
+**Lockout timer decremented before the lockout check:** if the timer reaches zero in step 1, execution falls through to full decode logic immediately in the same scan cycle — no one-cycle delay.
 
-**Accumulator reset before emit (step 9):** a new cycle always starts clean, whether or not a step was emitted (e.g. if lockout were ever active at that point — it cannot be given step 3, but the reset is unconditional for clarity).
+**Accumulator reset before emit:** a new cycle always starts clean, whether or not a step was emitted (e.g. if lockout were ever active at that point — it cannot be given step 3, but the reset is unconditional for clarity).
 
 **emit_step() dispatches to layer/keymap logic:** CW and CCW map to whatever the active layer specifies — volume up/down, alt-tab direction, LED brightness, etc. The encoder decode layer is fully agnostic to the assigned action.
-
-**LOCKOUT_MS = 3:** conservative relative to the ~41ms detent budget at 60 RPM. Tune empirically if needed; tightening to 2ms is safe given the hardware RC filter.

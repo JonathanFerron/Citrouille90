@@ -248,7 +248,7 @@ The host can deliver this either via the EP1 OUT endpoint or via a `SET_REPORT` 
 * Kailh Choc low-profile switches
 * Diode per switch
 * Column output low to row input pull-up scanning
-* matrix scan rate: 200 Hz, or once every 5 ms
+* matrix scan rate: 1000 Hz, or once every 1 ms
 
 ### Matrix GPIO allocation
 
@@ -550,7 +550,7 @@ On AVR Dx/DU:
 
 * Quadrature decoder using state machine (recommended)
 * State table-driven or bitwise decode
-* Sample at matrix scan rate (200 Hz)
+* Sample at matrix scan rate
 
 ### 15.3 Encoder Behavior Examples
 
