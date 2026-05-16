@@ -604,7 +604,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "../../../../../../../../Program Files/KiCad/6.0/",
-      "plot": "",
+      "plot": "../../gerber/",
       "pos_files": "",
       "specctra_dsn": "bluejay_left.dsn",
       "step": "",
