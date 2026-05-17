@@ -276,10 +276,6 @@ The 330 Ω series resistor limits current during ESD events. The 100 nF cap filt
 **Timer:** TCA0 in split mode — drives both LEDs independently from a single timer.
 
 **Frequency:** 1465 Hz
-```
-f_PWM = 24 MHz / (prescaler 64 × period 256) = 1465 Hz
-TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV64_gc;
-```
 
 1465 Hz is above the ~50–100 Hz flicker fusion threshold — no visible flicker at any duty cycle. PWM runs entirely in hardware; CPU has no per-cycle obligation (no matrix scan interference).
 
@@ -306,10 +302,10 @@ Three LEDs arranged horizontally near top edge, offset to the right. Power LED l
 - **Connector:** 3-pin through-hole header (2.54 mm pitch)
 - **Pinout:** GND — UPDI — VCC
 - **Position:** PCB top edge (preferred for easy access)
-- **Programmer:** CH340-based SerialUPDI dongle (already owned)
-- **Software:** avrdude with serialupdi support
+- **Programmer:** CH340-based SerialUPDI dongle (Adafruit UPDI friend)
+- **Software:** avrdude with serialupdi programmer
 
-**Critical rule: Never disable UPDI in fuses.** UPDI is the only recovery path if firmware is corrupted or the bootloader fails. Disabling it bricks the board permanently (no JTAG, no ISP on this device).
+**Critical rule: Never disable UPDI in fuses.** UPDI is the only recovery path if firmware is corrupted or the bootloader fails. Disabling it bricks the board and the only recovery path is a 12V UPDI programmer.
 
 ---
 
@@ -393,7 +389,14 @@ Three LEDs arranged horizontally near top edge, offset to the right. Power LED l
 | 1   | Bulk VBUS capacitor          | 4.7 µF   | 16 V    | 1206    | X7R or X5R ceramic, near USB connector |
 | 5   | Decoupling capacitors        | 100 nF   | —       | 0805    | 2× VDD (MCU), 1× VUSB (MCU), 1× ESD IC, 1× RESET filter |
 
-### 13.6 Resistors
+### 13.6 Capacitors (Encoder Filter and USB Shield)
+
+| Qty | Description                  | Value   | Package | Notes                                   |
+|-----|------------------------------|---------|---------|-----------------------------------------|
+| 2   | Encoder RC filter caps       | 10 nF   | 0805    | One per encoder pin (A, B), pin to GND  |
+| 1   | USB shield RC cap            | 4.7 nF  | 0805    | USB shield to GND, with 1 MΩ           |
+
+### 13.7 Resistors
 
 | Qty | Description                  | Value   | Package | Notes                                   |
 |-----|------------------------------|---------|---------|-----------------------------------------|
@@ -406,12 +409,7 @@ Three LEDs arranged horizontally near top edge, offset to the right. Power LED l
 
 > **Encoder RC resistor count clarification:** 2 pins (A and B) × 2 resistors each (1 pull-up to VDD + 1 series to MCU GPIO) = **4 resistors of 10 kΩ** total for the encoder filter.
 
-### 13.7 Capacitors (Encoder Filter and USB Shield)
 
-| Qty | Description                  | Value   | Package | Notes                                   |
-|-----|------------------------------|---------|---------|-----------------------------------------|
-| 2   | Encoder RC filter caps       | 10 nF   | 0805    | One per encoder pin (A, B), pin to GND  |
-| 1   | USB shield RC cap            | 4.7 nF  | 0805    | USB shield to GND, with 1 MΩ           |
 
 ### 13.8 LEDs
 
@@ -475,13 +473,7 @@ Before loading any firmware:
 
 ### 14.4 UPDI Recovery
 
-If firmware is corrupted and USB is non-functional, UPDI is the only recovery path. Always keep the CH340 SerialUPDI programmer accessible. avrdude command:
-
-```bash
-avrdude -c serialupdi -p avr64du32 -P /dev/ttyUSBx -U flash:w:firmware.hex:i
-```
-
-On Windows, replace `/dev/ttyUSBx` with `COMx`.
+If firmware is corrupted and USB is non-functional, UPDI is the only recovery path. Always keep the SerialUPDI programmer accessible.
 
 ---
 
@@ -491,6 +483,3 @@ On Windows, replace `/dev/ttyUSBx` with `COMx`.
 |------|--------|-------|
 | Encoder knob selection | 🔧 Pending | Choose to suit PES12 shaft spec |
 | 3D case design | 🔧 Pending | Switch plate 2.2 mm; Fusion 360 source to be created |
-| GPR retention test | 🔧 Pending | Test on Curiosity Nano before bootloader coding (see firmware notebook §18.2) |
-| Order placement | ✅ Ready | Digikey and Mouser orders staged |
-| PCB fab submission | ✅ Ready | KiCad project complete |
